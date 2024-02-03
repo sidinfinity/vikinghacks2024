@@ -1,23 +1,35 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request ,jsonify
 import pandas as pd
+
+from llama_index import StorageContext, load_index_from_storage
+
+import os
 
 # Read the CSV file
 df = pd.read_csv('topics.csv')
 
 app = Flask(__name__, template_folder='templates')
 
+os.environ["OPENAI_API_KEY"] = "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"
+storage_context = StorageContext.from_defaults(persist_dir="chatbot/storage")
+index = load_index_from_storage(storage_context)
+query_engine = index.as_query_engine()
+
+
 class Topic:      
-    def __init__(self, id, topic, pdfdir, img):
+    def __init__(self, id, topic, pdfdir, img, desc, phet):
         self.id = id
         self.topic = topic
         self.pdfdir = pdfdir
         self.img = img
+        self.desc = desc
+        self.phet = phet
 
 def getTopics():
     listTopics = []
     for i in range(len(df)):
         row = df.iloc[i]
-        topic = Topic(row['id'], row['topic'], row['pdfdir'], row['img'])
+        topic = Topic(row['id'], row['topic'], row['pdfdir'], row['img'], row["desc"], row["phet"])
         listTopics.append(topic)
     return listTopics
 
@@ -31,6 +43,34 @@ def topic_detail(topic_id):
     topic = next((t for t in getTopics() if t.id == topic_id), None)
     if topic:
         return render_template('topic_detail.html', item=topic)
+    else:
+        return "Topic not found", 404
+
+@app.route("/get")
+def get_bot_response():
+    # Retrieve the user's text from query parameters
+    os.environ["OPENAI_API_KEY"] = "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"
+    userText = request.args.get('msg')
+    print(userText)
+    
+    # Placeholder for where you would process the userText to generate a response
+    response = query_engine.query(userText).response
+    
+    return response
+
+def process_user_input(userText):
+    # Here, implement the logic to generate a response based on userText
+    # This is a placeholder function. Replace it with your chatbot's logic.
+    # For now, it simply echoes back the user's message
+    return f"Echo: {userText}"
+
+
+@app.route('/topic/phet/<int:topic_id>')
+def phet_detail(topic_id):
+    topic = next((t for t in getTopics() if t.id == topic_id), None)
+    
+    if topic:
+        return render_template('phet_detail.html', item=topic)
     else:
         return "Topic not found", 404
 
