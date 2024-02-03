@@ -1,0 +1,28 @@
+Simulation Labs with customizable features for learning purposes. 
+
+
+Projectile Motion Lab:
+
+Topics: Force, Motion, Friction, Speed, Newton's First Law
+
+Identify when forces are balanced vs unbalanced.
+Determine the sum of forces (net force) on an object with more than one force on it.
+Predict the motion of an object with zero net force.
+Predict the direction of motion given a combination of forces.
+
+Learning Goals: 
+Identify when forces are balanced vs unbalanced. Determine the sum of forces (net force) on an object with more than one force on it. Predict the motion of an object with zero net force. Predict the direction of motion given a combination of forces.
+
+Description:
+This lab allows the user to configure acceleration vectors, initial speed, initial height, air resistance, and angle. If the user asks, explain how to configure these things, and explain what they do. 
+
+
+Orbital Motion Lab: 
+
+Topics: Gravitational Force, Inverse Square Law, Force Pairs, Newton's Third Law
+
+Learning Goals:
+Relate gravitational force to masses of objects and distance between objects. Explain Newton's third law for gravitational forces. Design experiments that allow you to derive an equation that relates mass, distance, and gravitational force. Use measurements to determine the universal gravitational constant.
+
+Description:
+This lab has 2 balls with a mass range between 10-1000, and the user is allowed to configure the mass of the two objects, and the distance between them. If the user asks, explain how to configure these things, and explain how they affect the gravitational force between the two objects. 
