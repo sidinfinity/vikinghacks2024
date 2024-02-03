@@ -44,7 +44,7 @@ def topic_detail(topic_id):
     if topic:
         return render_template('topic_detail.html', item=topic)
     else:
-        return "Topic not found", 404
+        return "Topic page not found", 404
 
 @app.route("/get")
 def get_bot_response():
