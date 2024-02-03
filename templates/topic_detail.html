@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Site Metas -->
+  <link rel="icon" href="/static/images/favicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <!-- CSS Links -->
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+  <link href="/static/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <link href="/static/css/responsive.css" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <style>
+    .item_detail-box {
+      padding-left: 50px; /* Adjust this value as needed */
+    }
+  </style>
+</head>
+
+<body>
+    
+
+  <!-- Item Detail Section -->
+  <style>
+    .item_section {
+        margin-top: 100px; /* Adjust this value to move the section lower */
+    }
+  </style>
+  
+  <section class="item_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="item_img-box">
+            <img src="{{item.img}}" alt="Item Image">
+          </div>
+        </div>
+        
+        <div class="col-md-7">
+          <style>
+            .item_detail-box {
+              margin-left: auto; /* Pushes the section to the right */
+            width: 60%; /* Adjust width as needed */
+            }
+          </style>
+          <div class="item_detail-box">
+            <h2>{{ item.topic }}</h2>
+            
+           
+           
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer_section">
+    <!-- [Footer Content Here] -->
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="/static/js/jquery-3.4.1.min.js"></script>
+  <script src="/static/js/bootstrap.js"></script>
+  <script src="/static/js/custom.js"></script>
+</body>
+<style>
+  .info_section {
+      margin-top: 300px; /* Adjust this value to move the section lower */
+  }
+</style>
