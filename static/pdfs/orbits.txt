@@ -1,0 +1,1613 @@
+Understanding                                                                4.1.3
+Orbits
+In This Subsection You’ll Learn to...                                  Outline
+  Explain the basic concepts of orbital motion and describe how to
+                                                                       4.1.3.1 Orbital Motion
+  analyze them
+                                                                               Baseballs in Orbit
+  Explain and use the basic laws of motion Isaac Newton developed              Analyzing Motion
+  Use Newton’s laws of motion to develop a mathematical and
+  geometric representation of orbits                                   4.1.3.2 Newton’s Laws
+  Use two constants of orbital motion—specific mechanical energy and           Weight, Mass, and Inertia
+  specific angular momentum—to determine important orbital variables           Momentum
+                                                                               Changing Momentum
+                                                                               Action and Reaction
+                                                                               Gravity
+
+                                                                       4.1.3.3 Laws of Conservation
+                                                                               Momentum
+                                                                               Energy
+
+                                                                       4.1.3.4 The Restricted Two-body
+                                                                               Problem
+                                                                               Coordinate Systems
+                                                                               Equation of Motion
+                                                                               Simplifying Assumptions
+                                                                               Orbital Geometry
+
+                                                                       4.1.3.5 Constants of Orbital
+                                                                               Motion
+                                                                               Specific Mechanical Energy
+                                                                               Specific Angular
+                                                                                  Momentum
+        pacecraft work in orbits. We describe an orbit as a “racetrack” that
+
+S       a spacecraft drives around, as seen in Figure 4.1.3-1. Orbits and
+        trajectories are two of the basic elements of any space mission.
+Understanding this motion may at first seem rather intimidating. After all,
+to fully describe orbital motion we need some basic physics along with a
+healthy dose of calculus and geometry. However, as we’ll see, spacecraft
+orbits aren’t all that different from the paths of baseballs pitched across
+home plate. In fact, in most cases, both can be described in terms of the
+single force pinning you to your chair right now—gravity.
+   Armed only with an understanding of this single pervasive force, we
+can predict, explain, and understand the motion of nearly all objects in
+space, from baseballs to spacecraft, to planets and even entire galaxies.
+Section 4.1.3 is just the beginning. Here we’ll explore the basic tools for
+analyzing orbits. In the next several chapters we’ll see that, in a way,
+understanding orbits gives us a crystal ball to see into the future. Once we          Space Mission Architecture. This chapter
+know an object’s position and velocity, as well as the nature of the local            deals with the Trajectories and Orbits segment
+gravitational field, we can gaze into this crystal ball to predict where the          of the Space Mission Architecture, introduced
+                                                                                      in Figure 1-20.
+object will be minutes, hours, or even years from now.
+   We’ll begin by taking a conceptual approach to understanding orbits.
+Once we have a basic feel for how they work, we’ll take a more rigorous
+approach to describing spacecraft motion. We’ll use tools provided by
+Isaac Newton, who developed some fundamental laws more than 200
+years ago that we can use to explain orbits today. Finally, we’ll look at
+some interesting implications of orbital motion that allow us to describe
+their shape and determine which aspects remain constant when left
+undisturbed by outside non-gravitational forces.
+
+
+
+
+Figure 4.1.3-1.     Orbits as Racetracks. Orbits are like giant racetracks on which
+spacecraft “drive” around Earth.
+
+
+
+
+                                                             4.1.3-2
+                                                                  4.1.3.1 Orbital Motion
+
+                                                 In This Section You’ll Learn to...
+                                                      Explain, conceptually, how an object is put into orbit
+                                                      Describe how to analyze the motion of any object
+
+
+                                                 Baseballs in Orbit
+                                                    What is an orbit? Sure, we said it was a type of “racetrack” in space
+                                                 that an object drives around, but what makes these racetracks?
+                                                 Throughout the rest of this chapter we’ll explore the physical principles
+                                                 that allow orbits to exist, as well as our mathematical representations of
+                                                 them. But before diving into a complicated explanation, let’s begin with a
+                                                 simple experiment that illustrates, conceptually, how orbits work. To do
+                                                 this, imagine that we gather a bunch of baseballs and travel to the top of a
+                                                 tall mountain.
+                                                    Visualize that we are standing on top of this mountain prepared to
+                                                 pitch baseballs to the east. As the balls sail off the summit, what do we
+                                                 see? Besides seeing unsuspecting hikers panting up the trail and running
+                                                 for cover, we should see that the balls follow a curved path. Why is this?
+                                                 The force of our throw is causing them to go outward, but the force of
+                                                 gravity is pulling them down. Therefore, the “compromise” shape of the
+                                                 baseball’s path is a curve.
+                                                    The faster we throw the balls, the farther they go before hitting the
+                                                 ground, as you can see in Figure 4.1.3-2. This could lead you to conclude
+                                                 that the faster we throw them the longer it takes before they hit the
+                                                 ground. But is this really the case? Let’s try another experiment to see.
+                                                    As we watch, two baseball players, standing on flat ground, will
+                                                 release baseballs. The first one simply drops a ball from a fixed height. At
+                                                 exactly the same time, the second player throws an identical ball
+                                                 horizontally at the same height as hard as possible. What will we see? If
+                                                 the second player throws a fast ball, it‘ll travel out about 20 m (60 ft.) or so
+                                                 before it hits the ground. But, the ball dropped by the first player will hit
+                                                 the ground at exactly the same time as the pitched ball, as Figure 4.1.3-3
+                                                 shows!
+                                                    How can this be? To understand this seeming paradox, we must
+                                                 recognize that, in this case, the motion in one direction is independent of
+Figure 4.1.3-2. Throwing Baseballs Off of a      motion in another. Thus, while the second player’s ball is moving
+Mountain. When we throw the balls faster, they   horizontally at 30 km/hr (20 m.p.h.) or so, it’s still falling at the same rate
+travel farther before hitting the ground.
+                                                 as the first ball. This rate is the constant gravitational acceleration of all
+                                                 objects near Earth’s surface, 9.798 m/s2. Thus, they hit the ground at the
+                                                 same time. The only difference is that the pitched ball, because it also has
+                                                 horizontal velocity, will travel some horizontal distance before
+                                                 intercepting the ground.
+
+                                                               4.1.3-3
+Figure 4.1.3-3. Both Balls Hit at the Same Time. A dropped ball and a ball thrown
+horizontally from the same height will hit the ground at the same time. This is because
+horizontal and vertical motion are independent. Gravity is acting on both balls equally, pulling
+them to the ground with exactly the same acceleration of 9.798 m/s2.
+
+
+   Now let’s return to the top of our mountain and start throwing our
+baseballs faster and faster to see what happens. No matter how fast we
+throw them, the balls still fall at the same rate. However, as we increase
+their horizontal velocity, they’re able to travel farther and farther before
+                                                                                                   Figure 4.1.3-4. Earth’s Curvature. Earth’s
+they hit the ground. Because Earth is basically spherical in shape,                                curvature means the surface curves down
+something interesting happens. Earth’s spherical shape causes the surface                          about 5 m for every 8 km. On the surface of a
+to drop approximately five meters vertically for every eight kilometers                            sphere with that curvature, an object moving at
+                                                                                                   7.9 km/s is in orbit (ignoring air drag).
+horizontally, as shown in Figure 4.1.3-4. So, if we were able to throw a
+baseball at 7.9 km/s (assuming no air resistance), its path would exactly
+match Earth’s curvature. That is, gravity would pull it down about five
+meters for every eight kilometers it travels, and it would continue around
+Earth at a constant height. If we forget to duck, it may hit us in the back of
+the head about 85 minutes later. (Actually, because Earth rotates, it would
+miss us.) A ball thrown at a speed slower than 7.9 km/s falls faster than
+Earth curves away beneath it. Thus, it eventually hits the surface. The
+results of our baseball throwing experiment are shown in Figure 4.1.3-5.
+   If we analyze our various baseball trajectories, we see a whole range of
+different shapes. Only one velocity produces a perfectly circular
+trajectory. Slower velocities cause the trajectory to hit the Earth at some
+point. If we were to project this shape through the Earth, we’d find the
+trajectory is really a piece of an ellipse (it looks parabolic, but it’s actually
+elliptical). Throwing a ball with a speed slightly faster than the circular
+velocity, also results in an ellipse. If we throw the ball too hard, it leaves
+                                                                                                   Figure 4.1.3-5. Baseballs in Orbit. As we
+Earth altogether on a parabolic or hyperbolic trajectory, never to return.                         throw baseballs faster and faster, eventually we
+No matter how hard we throw, our trajectory resembles either a circle,                             can reach a speed at which Earth curves away
+ellipse, parabola, or hyperbola. As we’ll see in Section 4.1.3.4, these four                       as fast as the baseball falls, placing the ball in
+                                                                                                   orbit. At exactly the right speed it will be in a
+shapes are conic sections.                                                                         circular orbit. A little faster and it’s in an elliptical
+                                                                                                   orbit. Even faster and it can escape Earth
+                                                                                                   altogether on a parabolic or hyperbolic
+                                                                                                   t j t
+                                                                       4.1.3-4
+                                                So an object in orbit is literally falling around Earth, but because of its
+                                              horizontal velocity it never quite hits the ground. Throughout this book
+                                              we’ll see how important having the right velocity at the right place is in
+                                              determining the type of orbit we have.
+
+                                              Analyzing Motion
+                                                 Now that we’ve looked at orbits conceptually, let’s see how we can
+                                              analyze this motion more rigorously. Chances are, when you first learned
+                                              to play catch with a baseball, you had problems. Your poor partner had to
+                                              chase after your first tentative throws, which never seemed to go where
+                                              you wanted. But gradually, after a little bit of practice (and several
+                                              exhausted partners), you got better. Eventually, you could place the ball
+                                              right into your partner’s glove, almost without conscious thought.
+                                                 In fact, expert pitchers don’t think about how to throw; they simply
+                                              concentrate on where to throw. Somehow, their brain calculates the
+                                              precise path needed to deliver the ball to the desired location. Then it
+                                              commands the arm to a predetermined release point and time with
+                                              exactly the right amount of force. All this happens in a matter of seconds,
+                                              without a thought given to the likes of Isaac Newton and the equations
+                                              that describe the baseball’s motion. “So what?” you may wonder. Why
+                                              bother with all the equations that describe why it travels the way it does?
+                                                 Unfortunately, to build a pitching machine for a batting cage or to
+                                              launch a spacecraft into orbit, we can’t simply tell the machine or rocket
+                                              to “take aim and throw.” In the case of the rocket especially, we must
+                                              carefully study its motion between the launch pad and space.
+                                                 Now, we’ll define a system for analyzing all types of motion. It’s called
+                                              the Motion Analysis Process (MAP) checklist and is shown in Figure
+                                              4.1.3-6. To put the MAP into action, imagine that you must describe the
+                                              motion of a baseball thrown by our two baseball players in Figure 4.1.3-7.
+                                              How will you go about it?
+
+
+
+
+                                              Figure 4.1.3-7. Baseball Motion. To analyze the motion of a baseball, or a spacecraft, we
+                                              must step through the Motion Analysis Process (MAP) checklist.
+Figure 4.1.3-6. Motion Analysis Process
+(MAP) Checklist. Apply these steps to learn
+about moving objects and describe how they       First of all, you need to define some frame of reference or coordinate
+will move in the future.                      system. For example, do you want to describe the motion with respect to a
+                                              nearby building or to the center of Earth? In either case, you must define a
+                                              reference point and a coordinate frame for the motion you’re describing,
+                                              as shown in Figure 4.1.3-8.
+
+                                                             4.1.3-5
+   Next you need some short-hand way of describing this motion and its
+relation to the forces involved—a short-hand way we’ll call an equation of
+motion. Once you’ve determined what equation best describes the baseball’s
+motion, you need to simplify it so you can use it. After all, you don’t want to
+try to deal with how the motion of the baseball changes due to the
+gravitational pull of Venus or every little gust of wind in the park. So you
+must make some reasonable simplifying assumptions. For instance, you could
+easily assume that the gravitational attraction on the baseball from Venus, for
+example, is too small to worry about and the drag on the baseball due to air
+resistance is insignificant. And, in fact, as a good approximation, you could
+assume that the only force on the baseball comes from Earth’s gravity.
+   With these assumptions made, you can then turn your attention to the            Figure 4.1.3-8. Defining a Coordinate
+                                                                                   System. To analyze a baseball’s motion, we
+finer details of the baseball problem. For example, you want to carefully          can define a simple, two-dimensional
+define where and how the motion of the baseball begins. We call these the
+initial conditions of the problem. If you vary these initial conditions somehow
+(e.g., you throw the baseball a little harder or in a slightly different
+direction), the motion of the baseball will change. By assessing how these
+variations in initial conditions affect where the baseball goes, you can find
+out how sensitive the trajectory is to small changes or errors in them.
+   Finally, once you’ve completed all of these steps, you should verify the
+entire process by testing the model of baseball motion you’ve developed.
+Actually throw some baseballs, measure their trajectory deviations, and
+analyze differences (error analysis) between the motion you predict for the
+baseball and what you find from your tests. If you find significant
+differences, you may have to change your coordinate system, equation of
+motion, assumptions, initial conditions, or all of these. With the MAP in
+mind, we’ll begin our investigation of orbital motion in the next section by
+considering some fundamental laws of motion Isaac Newton developed.
+
+Section Review
+  Key Concepts
+
+     From a conceptual standpoint, orbital motion involves giving something enough horizontal velocity so
+     that, by the time gravity pulls it down, it has traveled far enough to have Earth’s surface curve away
+     from it. As a result, it stays above the surface. An object in orbit is essentially falling around the Earth but
+     going so fast it never hits it.
+
+     The Motion Analysis Process is a general approach for understanding the motion of any object through
+     space. It consists of
+     • A coordinate system
+     • An equation of motion
+     • Simplifying assumptions
+     • Initial conditions
+     • Error analysis
+     • Testing the model
+
+
+                                                          4.1.3-6
+                                                                   4.1.3.2 Newton’s Laws
+
+                                                   In This Section You’ll Learn to...
+                                                        Explain the concepts of weight, mass, and inertia
+                                                        Explain Newton’s laws of motion
+                                                        Use Newton’s laws to analyze the simple motion of objects
+
+
+                                                      Since the first caveman threw a rock at a sabre-toothed tiger, we’ve
+                                                   been intrigued by the study of motion. In our quest to understand nature,
+                                                   we’ve looked for simple, fundamental laws that all objects obey. These
+                                                   Laws of Motion would apply universally for everything from gumdrops
+                                                   to galaxies (Figure 4.1.3-9). They would be unbreakable and empower us
+                                                   to explain the motion of the heavens, understand the paths of the stars,
+                                                   and predict the future position of our Earth. The Greek philosopher
+                                                   Aristotle defined concepts of orbital motion that held favor until
+                                                   challenged by such critical thinkers as Galileo and Kepler. Recall that
+                                                   Kepler gave us three laws to describe planetary motion, but didn’t
+                                                   explain their causes. That’s where Isaac Newton comes in.
+                                                      Reflecting on his lifetime of scientific accomplishments, Newton
+                                                   rightly observed that he was able to do so much because he “stood on the
+                                                   shoulders of giants.” Armed with Galileo’s two basic principles of
+                                                   motion—inertia and relativity—and Kepler’s laws of planetary motion,
+                                                   Isaac Newton was poised to determine the basic laws of motion that
+                                                   revolutionized our understanding of the world.
+Figure 4.1.3-9. Cartwheel Galaxy. Our laws            No single person has had as great an impact on science as Isaac
+of motion apply universally, including the stars   Newton. His numerous discoveries and fundamental breakthroughs
+and planets of the Cartwheel Galaxy.
+(Courtesy of the Association of Universities for   easily fill a volume the size of this book. Inventing calculus (math
+Research in Astronomy, Inc./Space Telescope        students still haven’t forgiven him for that!), inventing the reflecting tele-
+Science Institute)                                 scope, and defining gravity are just some of his many accomplishments.
+                                                   For our purposes, we’ll see that the study of orbits (astrodynamics) builds
+                                                   on four of Newton’s laws: three of motion and one describing gravity.
+
+                                                   Weight, Mass, and Inertia
+                                                      Before plunging into a discussion of Newton’s many laws, let’s take a
+                                                   moment to complicate a topic that, until now, you probably thought you
+                                                   understood very well—weight. When we order a “Quarter Pounder with
+                                                   Cheese™” (Figure 4.1.3-10), we’re describing the weight of the
+                                                   hamburger (before cooking). To measure this weight (say, to determine
+                                                   what it weighs after cooking), we slap the burger on a scale and read the
+                                                   results. If our scale gave weight in metric units, we’d see our quarter-
+Figure 4.1.3-10. Quarter Pounder with              pounder weighs about one newton. This property we call weight is really
+Cheese™. When we order a Quarter Pounder
+with Cheese, we get about 0.1 kg mass of          the result of another, more basic property of the hamburger called “mass”
+meat.                                              plus the influence of gravity. A hamburger that weighs one newton (1/4
+
+                                                                4.1.3-7
+pound) has a mass of 1/9.798 kg or about 0.1 kg. Knowing the mass of
+our hamburger, we automatically know three useful things about it, as
+illustrated in Figure 4.1.3-11.
+   First, mass is a measure of how much matter or “stuff” the hamburger
+contains. The more mass, the more stuff. If we have to haul 200 Quarter
+Pounders™ to a family picnic, we can add the masses of individual burgers
+to determine how much total mass we need to carry. Carrying these
+hamburgers, which have a total mass of 22.5 kg (50 lbs.), will take some
+planning. Thus, knowing how much stuff one object has is important
+whenever we must combine it with others (as we do for space missions).
+   But that’s not all. Knowing the mass of an object also tells us how
+much inertia it has. Galileo first put forth the principle of inertia in terms
+of an object’s tendency to stay at rest or in motion unless acted on by an
+outside influence. To visualize inertia, assume you’re in “couch potato”
+mode in front of the TV, with your work sitting on the desk, calling for
+your attention. Somehow, you just can’t motivate yourself to get up from
+the couch and start working. You have too much “inertia,” so it takes an
+outside influence (another person or a deep-rooted fear of failure) to over-
+come that “inertia.”
+   For a given quantity of mass, inertia works in much the same way. An
+object at rest has a certain amount of inertia, represented by its mass, that
+must be overcome to get it in motion. Thus, to get the Quarter Pounder™
+from its package and into your mouth, you must overcome its inherent
+inertia. You do that when you pick it up, if you can!
+   An object already in motion also has inertia by virtue of its mass. To
+change its direction or speed, we must apply a force. For instance a car
+skidding on ice slides in a straight line indefinitely (assuming no friction
+force), or at least until it hits something.
+   Finally, knowing an object’s mass reveals how it affects other objects
+merely by its presence. There’s an old, corny riddle which asks “Which
+weighs more—a pound of feathers or a pound of lead?” Of course, they             Figure 4.1.3-11. What is Mass? The amount
+weigh the same—one pound. Why is that? Weight is a result of two                 of mass an object has tells us three things
+things—the amount of mass, or “stuff,” and gravity. So, assuming we              about it: (1) how much “stuff” it contains, (2)
+                                                                                 how much it resists changes in motion—its
+measure the weight of feathers and lead at the same place, their masses          inertia, and (3) how much gravitational force it
+are the same. Gravity is the tendency for two (or more) chunks of stuff to       exerts and is exerted on it by other masses in
+attract each other. The more stuff (or mass) they have, the more they            the universe.
+attract. This natural attraction between chunks of stuff is always there.
+Thus, our Quarter Pounder™ lying in its package causes a very slight
+gravitational pull on our fries, milk shake, and all other mass in the uni-
+verse. (You’d better eat fast!)
+   Now that you’ll never be able to look at a Quarter Pounder™ the same
+way again, let’s see how Isaac Newton used these concepts of mass to
+develop some basic laws of motion and gravity.
+
+
+
+
+                                                         4.1.3-8
+                                                     Momentum
+                                                        Newton’s First Law of Motion was actually a variation on Galileo’s
+                                                     concept of inertia. He discovered it and other principles of gravity and
+                                                     motion in 1655, when a great plague ravaged England and caused
+                                                     universities to close. At the time, he was a 23-year-old student at
+                                                     Cambridge. Instead of hitting the beach for an extended “spring break,”
+                                                     the more scholarly Newton hit the apple orchard for meditation (or so
+                                                     legend has it). But his findings weren’t published until 1687—in The
+                                                     Mathematical Principles of Natural Philosophy. In this monumental work he
+                                                     stated
+
+                                                       Newton’s First Law of Motion. A body continues in its state of rest, or
+                                                       of uniform motion in a straight line, unless compelled to change that state
+                                                       by forces impressed upon it.
+
+                                                        Newton’s First Law says that any object (or chunk of mass) that is at
+                                                     rest will stay at rest forever, unless some force makes it move. Similarly,
+                                                     any object in motion will stay in motion forever, with a constant speed
+                                                     in the same straight-line direction, until some force makes it change
+                                                     either its speed or direction of motion. Try to stop a speeding bullet like
+                                                     the one in Figure 4.1.3-12 and you get a good idea how profound
+                                                     Newton’s first law is.
+Figure 4.1.3-12. Newton’s First Law. Any
+object in motion, such as a speeding bullet, will       One very important aspect of the first law to keep in mind, especially
+tend to stay in motion, in a straight line, unless   when you study spacecraft motion, is that motion tends to stay in a
+acted on by some outside force (like gravity or      straight line. Therefore, if you ever see something not moving in a
+hitting a brick wall.)
+                                                     straight line, such as a spacecraft in orbit, some force must be acting on it.
+                                                        We know that an object at rest is lazy; it doesn’t want to start moving
+                                                     and will resist movement to the fullest extent of its mass. We’ve also
+                                                     discovered that, once it’s in motion, it resists any change in its speed or
+                                                     direction. But the amount of resistance for an object at rest and one in
+                                                     motion are not the same! This seeming paradox is due to the concept of
+                                                     momentum. Momentum is the amount of resistance an object in motion
+                                                     has to changes in its speed or direction of motion. This momentum is the
+                                                     result of combining an object’s mass with its velocity. Because an object’s
+                                                     velocity can be either linear or angular, there are two types of momentum:
+                                                     linear and angular.
+                                                        Let’s start with linear momentum. To see how it works, we consider
+                                                     the difference between a bulldozer and a baby carriage moving along a
+                                                     street, as shown in Figure 4.1.3-13. Bulldozers are massive machines
+                                                     designed to savagely rip tons of dirt from Earth. Baby carriages are
+                                                     delicate, four-wheeled carts designed to carry cute little babies around
+Figure 4.1.3-13. Bulldozer, Baby Carriage,           the neighborhood. Obviously, a bulldozer has much more mass than a
+and Momentum. The momentum of any object             baby carriage, but how does their momentum compare? Unlike inertia,
+is the product of its mass and velocity. So, a       which is a function only of an object’s mass, linear momentum, p , is the
+bulldozer moving at the same speed as a baby
+carriage has much more momentum, due to its          product of an object’s mass, m, and its velocity, V . [Note: because we
+large mass.                                          describe velocity and momentum in terms of magnitude and direction,
+                                                     we treat them and other important concepts as vector quantities.]
+
+                                                                  4.1.3-9
+                                   p = mV                              (4.1.3-1)
+        where
+        p = linear momentum vector (kg · m/s)
+        m = mass (kg)
+        V = velocity vector (m/s)
+    To compare the linear momentum of the bulldozer and the baby
+carriage, we’d have to know how fast they were moving. For the two to
+have the same linear momentum, the baby carriage, being much less
+massive, would have to be going much, much faster!
+    Linear momentum is fairly basic because it involves motion in a
+straight line. Angular momentum, on the other hand, is slightly harder to
+understand because it deals with angular motion. Let’s consider a simple
+toy top. If we set the top upright on a table, it will fall over, but if we spin
+it fast enough, the top will seem to defy gravity. A spinning object tends
+to resist changes in the direction and rate of spin, like the toy top shown
+in Figure 4.1.3-14, just as an object moving in a straight line resists
+changes to its speed and direction of motion. Angular momentum, H , is
+the amount of resistance of a spinning object to change in spin rate or
+direction of spin. Linear momentum is the product of the object’s mass,
+m, (which represents its inertia, or tendency to resist a change in speed
+and direction), and its velocity, V . Similarly, angular momentum is the
+product of an object’s resistance to change in spin rate or direction, and its
+rate of spin. An object’s resistance to spin is its moment of inertia, I. We
+represent the angular velocity, which is a vector, by Ω . So we find the
+angular momentum vector, H , using Equation (4.1.3-2).
+                                                                                   Figure 4.1.3-14. Angular Momentum. A
+                                   H = IΩ                              (4.1.3-2)   non-spinning top (left) falls right over, but a
+                                                                                   spinning top, because of its angular
+        where                                                                      momentum, resists the force applied by gravity
+        H = angular momentum vector (kg · m2/s)
+        I = moment of inertia (kg · m2)
+        Ω = angular velocity vector (rad/s)
+To characterize the direction of angular momentum, we need to examine
+the angular velocity, Ω . Look at the spinning wheel in Figure 4.1.3-15 and
+apply the right-hand rule. With our fingers curled in the direction it’s
+spinning, our thumb points in the direction of the angular velocity vector,
+ Ω , and the angular momentum vector, H .
+   As Equation (4.1.3-2) implies, H is always in the same direction as the
+angular velocity vector, Ω . In the next section we’ll see that, because of
+angular momentum, a spinning object resists change to its spin direction
+and spin rate.
+   We can describe angular momentum in another way. A mass spinning
+on the end of a string also has angular momentum. In this case, we find it
+                                                                                   Figure 4.1.3-15. The Right-hand Rule. We
+by using the instantaneous tangential velocity of the spinning mass, V ,           find the direction of the angular velocity vector,
+and the length of the string, R , also called the moment arm. We combine            Ω , and the angular momentum vector, H ,
+these two with the mass, m, using a cross product relationship to get H .          using the right-hand rule.
+
+                                                          4.1.3-10
+                                                                                 H = R × mV                           (4.1.3-3)
+
+                                                         where
+                                                         H = angular momentum vector (kg · m2/s)
+                                                         R = position (m)
+                                                         m = mass (kg)
+                                                         V = velocity vector (m/s)
+                                                   By the nature of the cross product operation, we can tell that H must
+                                                 be perpendicular to both R and V . Once again, we can use the right-
+                                                 hand rule to find H , as shown in Figure 4.1.3-16.
+                                                   In Section 4.1.3.5, we’ll see that angular momentum is a very important
+                                                 property of spacecraft orbits. Later, we’ll find angular momentum is also
+                                                 a useful property for gyroscopes and spacecraft in determining and
+Figure 4.1.3-16. Describing Angular Mo-
+mentum. The direction of the angular momen-      maintaining their attitude.
+tum vector, H , is perpendicular to R and V ,
+and follows the right-hand rule.
+                                                 Changing Momentum
+                                                    Now that we’ve looked at momentum, let’s go back to Newton’s laws
+                                                 of motion. As we saw, whether we’re dealing with linear or angular
+                                                 momentum, both represent the amount a moving object resists change in
+                                                 its direction or speed. Now we can determine what it will take to
+                                                 overcome this resistance using Newton’s Second Law.
+
+                                                   Newton’s Second Law of Motion. The time rate of change of an object’s
+                                                   momentum equals the applied force.
+
+                                                    In other words, to change an object’s momentum very quickly, such as
+                                                 when we hit a fast ball with a bat, the force applied must be relatively
+                                                 high. On the other hand, if we’re in no hurry to change the momentum,
+                                                 we can apply a much lower force over much more time.
+                                                    Let’s imagine we see a bulldozer creeping down the street at 1 m/s
+                                                 (3.28 ft./s), as in Figure 4.1.3-17. To stop the bulldozer dead in its tracks,
+                                                 we must apply some force, usually by pressing on the brakes. How much
+                                                 force depends on how fast we want to stop the bulldozer. If, for instance,
+                                                 we want to stop it in one second, we’d have to overcome all of its
+                                                 momentum quickly by applying a tremendous force. On the other hand,
+                                                 if we want to bring the bulldozer to a halt over one hour, we could apply
+                                                 a much smaller force. Thus, the larger the force applied to an object, the
+                                                 faster its momentum changes.
+                                                    Now let’s summarize the relationship implied by Newton’s Second
+                                                 Law. The shorthand symbol we’ll use to represent a force is F . The
+Figure 4.1.3-17. Newton’s Second Law.            symbol p represents linear momentum. To represent how fast a quantity
+The force we must apply to stop a moving
+object depends on how fast we want to change     is changing, we must introduce some notation from calculus. (See
+its momentum. If two bulldozers are moving at    Appendix A.3 for a complete review of these concepts.) We use the Greek
+1 m/s (about the speed of a brisk walk), we      symbol “delta,” ∆, to represent a very small change in any quantity. Thus,
+must apply a much, much larger force to stop a
+bulldozer in one second than to stop it in one   we represent the rate of change of a quantity, such as momentum, p , over
+hour.                                            some short length of time, t, as
+
+                                                              4.1.3-11
+                        ∆p        change in momentum
+                        ------- = ----------------------------------------------------------              (4.1.3-4)
+                         ∆t                 change in time
+This equation shows how fast momentum is changing. We now express
+Newton’s Second Law in symbolic shorthand as
+
+                                       ∆p        ∆ ( mV )
+                                   F = ------- = ------------------                                       (4.1.3-5)
+                                        ∆t             ∆t
+which is true only if ∆t is very small.
+  We can expand this equation by applying the ∆ to each term in the
+parentheses (another concept from calculus), to get
+
+                                          ∆V ∆m
+                                    F = m -------- + --------- V                                          (4.1.3-6)
+                                           ∆t          ∆t
+   So what can we do with this relationship? Let’s begin with ∆m ⁄ ∆t in
+the second term. This ratio represents how fast the mass of the object is
+changing. For many cases, the mass of the object won’t change, so this
+term is zero for those cases. Now, for constant mass problems, we have
+only the first term in the relationship ∆V ⁄ ∆t , which represents how fast
+velocity is changing. But this is just the definition of acceleration, a . If we
+substitute a for ∆V ⁄ ∆t into Equation (4.1.3-6), we get the more familiar
+version
+
+                                                F = ma                                                    (4.1.3-7)
+        where
+         F = force vector (kg m/s2 = N)
+        m = mass (kg)
+         a = acceleration (m/s2)
+  Equation (4.1.3-7) is arguably one of the most useful equations in all of
+physics and engineering. It allows us to understand how forces affect the
+motion of objects. Armed with this simple relationship, we can determine
+everything from how much force we need to stop a bulldozer, to the
+amount of acceleration Earth’s gravity causes on the Moon.
+
+Action and Reaction
+   Newton’s first two laws alone would have made him famous, but he
+went on to discover a third law, which describes a very important
+relationship between action and reaction.
+   A simple example of Newton’s Third Law in action applies to ice
+skating. Imagine two ice skaters, standing in the middle of the rink, as
+shown in Figure 4.1.3-18. If one gives the other a push, what happens?
+They both move backward! The first skater exerted a force on the second,
+but in turn an equal but opposite force is exerted on him, thus sending
+him backward! In fact, Newton found that the reaction is exactly equal in
+magnitude but opposite in direction to the original action.
+
+                                                                                               4.1.3-12
+                                                     Newton’s Third Law of Motion. When body A exerts a force on body B,
+                                                     body B will exert an equal, but opposite, force on body A.
+
+
+
+
+                                                  Figure 4.1.3-18. Two Ice Skaters Demonstrate Newton’s Third Law. If they initially start
+                                                  at rest and the first one pushes against the second, they’ll both go backward. The first skater
+                                                  applied an action—pushing—and received an equal but opposite reaction.
+
+                                                     In the free-fall environment of space an astronaut must be very
+                                                  conscious of this fact. Suppose an astronaut tries to use a power wrench
+                                                  to turn a simple bolt without the force of gravity to anchor her in place.
+                                                  Unless she braces herself somehow, she’ll start to spin instead of the bolt!
+
+                                                  Gravity
+                                                     The image most people have of Newton is of a curly-haired man clad
+                                                  in the tights and lace common to the 17th century, seated under an apple
+                                                  tree with an apple about to land on his head. After being hit by one too
+                                                  many apples, he suddenly jumped up and shouted “Eureka! (borrowing
+                                                  a phrase from Archimedes) I’ve invented gravity!” While this image is
+                                                  more the stuff of Hollywood than historical fact, it contains some truth.
+                                                  Newton did observe falling objects, such as apples, and read extensively
+                                                  Galileo’s work on falling objects.
+                                                     The breakthrough came when Newton reasoned that the force due to
+                                                  gravity must decrease with the square of the distance from the attracting
+                                                  body (Earth). In other words, an object twice as far away from Earth is
+                                                  attracted only one fourth as much. Newton excitedly took observations of
+                                                  the Moon to verify this model of gravity. Unfortunately, his
+                                                  measurements consistently disagreed with his model by one-sixth.
+                                                  Finally, in frustration, Newton abandoned his work on gravity. Years
+                                                  later, however, he found that the value for Earth’s mass he had been using
+                                                  in his calculations was off by exactly one-sixth. Thus, his model of gravity
+                                                  had been correct all along! We call it Newton’s Law of Universal
+                                                  Gravitation. “Universal” because we believe the same principle must
+Figure     4.1.3-19. Newton’s         Law    of   apply everywhere in the universe. In fact, much of modern cosmology—
+Universal Gravitation. The force of attraction
+between any two masses is directly                all we know about the structure of the universe—depends on applying
+proportional to the product of their masses and   this simple law. We can see it applied most simply in Figure 4.1.3-19.
+inversely propor-tional to the square of the
+distance between them. Thus, if we double the
+distance between two objects, the gravitational
+force decreases to 1/4 the original amount.
+
+                                                                  4.1.3-13
+  Newton’s Law of Universal Gravitation. The force of gravity between
+  two bodies is directly proportional to the product of their two masses and
+  inversely proportional to the square of the distance between them.
+
+We can express this in symbolic shorthand as
+
+                                                                  G m1 m2
+                                                                                      -
+                                                            F g = ---------------------
+                                                                              2
+                                                                                                                                                     (4.1.3-8)
+                                                                          R
+
+        where
+        Fg                = force due to gravity (N)
+        G                 = universal gravitational constant = 6.67 × 10–11 N m2/kg2
+        m1, m2 = masses of two bodies (kg)
+        R                 = distance between the two bodies (m)
+   So what does this tell us? If we have two bodies, say Earth and the
+Moon, the force of attraction equals the product of their two masses, times
+                                                                                                                                                                 Figure 4.1.3-20. Earth and Moon in a Tug-
+a constant divided by the square of the distance between them. Let’s look                                                                                        of-War. Because of gravity, the Earth and
+at some real numbers to see just how hard Earth tugs on the Moon and                                                                                             Moon pull on each other with incredible force,
+vice versa, as shown in Figure 4.1.3-20. Earth’s mass, mEarth, is 5.98 × 1024                                                                                    which causes tides on Earth.
+kg (give or take a couple of mountains!), and the Moon’s mass, mMoon, is
+7.35 × 1022 kg. The average distance between the Earth and Moon is about
+3.84 × 108 m. We already know the gravitational constant, G. Using the
+relationship for gravitational force we just described, we find
+
+                                                         Gm Earth m Moon
+                                                   F g = ---------------------------------------
+                                                                              2
+                                                                          R
+                                                          2
+                                         – 11 Nm                                        24                                        22
+                6.67 × 10 ------------                  2 
+                                                                ( 5.98 × 10 kg ) ( 7.35 × 10 kg )
+                                                 kg 
+                                                                                                                                                 -
+         F g = -----------------------------------------------------------------------------------------------------------------------------------
+                                                                                                   2
+                                                                                       8
+                                                             ( 3.84 × 10 m )
+
+                                                            20
+                        F g = 1.98 × 10                          N (or about 4.46 × 1019 lbf)
+
+    In other words, there’s a huge force pulling the Earth and Moon
+together. But do we experience the result of this age-old tug-of-war? You
+bet we do! The biggest result we see is in ocean tides. The side of Earth
+closest to the Moon is attracted more than the side away from the Moon
+(gravity decreases as the square of the distance). Thus, all the ocean water
+on the side closest to the Moon swells toward the Moon; on the other side,
+the water swells away from the Moon due to the conservation of angular
+momentum as Earth rotates. Depending on the height and shape of the
+ocean floor, tides can raise and lower the sea level in some places more
+than 5 m (16 ft.). If you think about how much force it would take you to
+lift half the ocean this much, the incredibly large force we computed
+above begins to make sense.
+
+                                                                                                                       4.1.3-14
+   It’s important to remember that the force of gravity decreases as the
+square of the distance between masses increases. This means that if you
+want to weigh less, you should take a trip to the mountains! If you
+normally live in Houston, Texas, (elevation ~0 ft.) and you take a trip to
+Leadville, Colorado, (elevation 3048 m or 10,000 ft.), you won’t weigh as
+much. That’s because you’re a bit farther away from the attracting body
+(Earth’s center). But before you start packing your bags, look closely at
+what is happening. Your weight will change because the force of gravity is
+slightly less, but your mass won’t change. Remember, weight measures
+how much gravity is pulling you down. Mass measures how much stuff
+you have. So even though the force pulling down on the scale will be
+slightly less, you’ll still have those unwanted bulges.
+   Because the gravitational force changes, the acceleration due to gravity
+also changes. We can compute the acceleration due to gravity by
+combining the relationships expressed in Newton’s Second Law of
+Motion and Newton’s Law of Universal Gravitation. We know from
+Newton’s Second Law (dropping vector notation because we’re
+interested only in magnitudes) that
+                                       F = ma                        (4.1.3-9)
+We can substitute this expression into Newton’s relationship for gravity
+(Equation (4.1.3-8)) to get an expression for the acceleration of any mass
+due to Earth’s gravity.
+                                   mG m Earth
+                                                              -
+                            ma g = ----------------------------
+                                                   2
+                                               R
+which simplifies to
+                                     G m Earth
+                                                          -
+                               a g = ----------------------
+                                                  2
+                                              R
+For convenience, we typically combine G and the mass of the central body
+(Earth in this case) to get a new value we call the gravitational parameter, µ
+(Greek, small mu), where µ ≡ G m. For Earth, we denote this with a
+subscript, µEarth.
+
+                                        µ Earth
+                                  a g = -------------
+                                                2
+                                                                    (4.1.3-10)
+                                            R
+        where
+        ag      = acceleration due to gravity (m/s2)
+        µEarth ≡ G mEarth = 3.986 × 1014 m3/s2
+        R       = distance to Earth’s center (m)
+   If we substitute the values for µEarth and use Earth’s mean radius
+(6,378,137.0 m) we get ag = 9.798 m/s2 at Earth’s surface, obviously
+pulling toward Earth’s center. Note: we usually use kilometers instead of
+meters in this equation, because Earth’s radius is so large.
+
+             4.1.3-15
+Section Review
+ Key Concepts
+
+   The mass of an object denotes three things about it
+   • How much “stuff” it has
+   • How much it resists motion—its inertia
+   • How much gravitational attraction it has
+
+   Newton’s three laws of motion are
+   • First Law. A body continues in its state of rest, or in uniform motion in a straight line, unless compelled
+     to change that state by forces impressed upon it.
+      - The first law says that linear and angular momentum remain unchanged unless acted upon by an
+        external force or torque, respectively
+      - Linear momentum, p , equals an object’s mass, m, times its velocity, V
+      - Angular momentum, H , is the product of an object’s moment of inertia, I, (the amount it resists
+        angular motion) and its angular velocity, Ω
+      - We express angular momentum as a vector cross product of an object’s position from the center of
+        rotation, R (called its moment arm), and the product of its mass, m, and its instantaneous tangential
+        velocity, V
+   • Second Law. The time rate of change of an object’s momentum equals the applied force.
+   • Third law. When body A exerts a force on body B, body B exerts an equal but opposite force on body A.
+
+   Newton’s Law of Universal Gravitation. The force of gravity between two bodies (m1 and m2) is
+   directly proportional to the product of the two masses and inversely proportional to the square of the
+   distance between them (R).
+   • G = universal gravitational constant = 6.67 × 10–11 Nm2/kg2
+   • We often use the gravitational parameter, µ, to replace G and m. µ ≡ G m
+     - The gravitational parameter of Earth, µEarth, is
+        µ Earth ≡ G m Earth = 3.986 × 1014 m3/s2, or, using kilometer instead of meters, µEarth = 3.986 × 105
+        km3/s2
+
+
+
+
+                                                    4.1.3-16
+                                                              4.1.3.3 Laws of Conservation
+
+                                                    In This Section You’ll Learn to...
+                                                         Describe the basic laws of conservation of momentum and energy
+                                                         and apply them to simple problems
+
+
+                                                       For any mechanical system, basic properties, such as momentum and
+                                                    energy, remain constant. In physics we say that if a certain property or
+                                                    quantity remains unchanged for a given system, that property or quantity
+                                                    is conserved. So let’s take a look at two basic properties—momentum and
+                                                    energy—to see how they’re conserved.
+
+                                                    Momentum
+                                                       One very important implication of Newton’s Third Law has to do with
+                                                    the amount of momentum in a system. Newton’s Third Law implies the
+                                                    total momentum in a system remains unchanged, or is conserved. We call
+                                                    this conservation of momentum.
+                                                       To understand this concept let’s go back to our ice skating example.
+                                                    When the two skaters faced each other, neither of them was moving, so
+                                                    the total momentum of the system was zero. Then the first one pushed on
+                                                    the second, and he moved in one direction with some speed, while she
+                                                    moved in the other. Their speeds won’t be the same unless their masses
+                                                    are equal. The first skater moves in one direction with a speed that
+                                                    depends on his mass, while the other moves in the opposite direction
+                                                    with a speed depending on her mass. Now, the second skater’s momen-
+                                                    tum (the product of her mass and velocity) is equal in magnitude, but
+                                                    opposite in direction, to his.
+                                                       Depending on how we define our frame of reference, the first skater’s
+                                                    momentum could be negative while the other’s is positive. Adding the
+                                                    momentums, gives us zero, so, the original momentum of the system (the
+                                                    two skaters) hasn’t changed. Thus, as Figure 4.1.3-21 shows, we say that
+                                                    the system’s total momentum is conserved. Example 4-4 also shows this
+                                                    principle in action.
+                                                       This conservation principle works equally well for angular momen-
+                                                    tum. You’ve probably seen a good example of this with figure skaters,
+                                                    who always include a spin in their routines. Remember, once an object (or
+                                                    skater) begins to spin, it has angular momentum.
+Figure 4.1.3-21. Conservation of Momen-                By watching these skaters closely, you may see them move their arms
+tum. Two people on ice skates demonstrate the
+concept of conservation of linear momentum.
+                                                    outward or inward to vary their spin rate. How does this change their
+Initially the two are at rest; thus, the momentum   spin rate? We know from Equation (4.1.3-2) that angular momentum, H ,
+of the system is zero. But as one skater pushes     equals the product of the moment of inertia, I, and the spin rate, Ω . The
+on the other, they both start moving in opposite
+directions. Adding their two momentum vectors
+                                                    moment of inertia of an object is proportional to its distance from the axis
+together still gives us zero; thus, momentum of     of rotation. To change their moment of inertia, skaters move their arms
+the system is conserved.                            outward or inward, which increases or decreases the radius, thereby
+
+                                                                 4.1.3-17
+changing I. Because momentum is conserved, it must stay constant as
+moment of inertia changes. But the only way this can happen is for the
+angular velocity, Ω , to change. Thus, if skaters put their arms out, as in
+Figure 4.1.3-22, they increase their moment of inertia and spin slower to
+maintain the same angular momentum. If they bring their arms in, as in
+Figure 4.1.3-23, they decrease their moment of inertia and increase the
+spin rate to maintain the same angular momentum.
+
+Energy
+   We’ve all had those days when somehow we just don’t seem to have
+any energy. But what exactly is energy? Energy can take many forms
+including electrical, chemical, nuclear, and mechanical. For now, let’s deal
+only with mechanical energy because it’s the most important for                Figure 4.1.3-22. Spinning Slowly. Skaters
+understanding motion. If you’ve jumped off a platform, climbed a ladder,       extend their arms to increase moment of
+or played with a spring, you’ve experienced mechanical energy. Total           inertia—spinning more slowly.
+mechanical energy, E, comes from an object’s position and motion. It’s
+composed of potential energy, PE, which is due entirely to an object’s
+position and kinetic energy, KE, which is due entirely to the object’s
+motion. Total mechanical energy can be only potential, kinetic, or some
+combination of both
+
+                               E = KE + PE                        (4.1.3-11)
+        where
+        E = total mechanical energy (kg m2/s2)
+        PE = potential energy (kg m2/s2)
+        KE = kinetic energy (kg m2/s2)
+   To better understand what the trade-off between potential and kinetic
+energy means, we need to understand where it takes place. We say that
+gravity is a conservative field—a field in which total energy is conserved.    Figure 4.1.3-23. Spinning Quickly. Skaters
+                                                                               bring in their arms to decrease moment of
+Thus, the sum of PE and KE, or the total E, in a conservative field is         inertia—spinning   faster.   Total  angular
+constant.                                                                      momentum is the same in both cases.
+   Potential energy is the energy an object in a conservative field has
+entirely because of its position. We call it “potential” energy because we
+don’t really notice it until something changes. For example, if you pick up
+a 1 kg (2.2 lb.) mass and raise it above your head, it’s higher position
+gives it more “potential” energy. This potential is realized when you drop
+the mass and it lands on your foot! To quantify this form of energy, we
+must derive an expression for the amount of work done by raising the
+object above a reference point (usually Earth’s surface) against the force
+of gravity. If we raise the object a small distance (a few hundred meters or
+less), we can assume gravity is constant and we get
+
+
+
+
+                                                       4.1.3-18
+                                                                                 PE = m a g h                          (4.1.3-12)
+                                                          where
+                                                          m = mass (kg)
+                                                          ag = acceleration due to gravity (m/s2)
+                                                          h = height above a reference point (m)
+                                                  Thus, to compute an object’s potential energy after raising it a small
+                                                  distance, we need to know three things: the amount of mass, m; its
+                                                  position above a reference point, h; and the acceleration due to gravity, ag,
+                                                  at that reference point. But, if we want to find a spacecraft’s potential
+                                                  energy in orbit high above Earth, we can’t assume gravity is constant, and
+                                                  we can’t use Earth’s surface as a convenient reference point anymore. Let’s
+                                                  see how we find potential energy in an orbit.
+                                                     As we know from the last section, the gravitational acceleration varies
+                                                  depending on an object’s distance from Earth’s center, R. To derive the
+                                                  potential energy equation for this gravitational field, we must determine
+                                                  the amount of work it would take to move the spacecraft from Earth’s
+                                                  center to its orbital position, a distance of R. That derivation yields
+
+                                                                                         mµ
+                                                                                  PE = – ---------                     (4.1.3-13)
+                                                                                            R
+                                                          where
+                                                          PE = spacecraft’s potential energy (kg km2/s2)
+                                                          m = spacecraft’s mass (kg)
+                                                          µ = gravitational parameter (km3/s2) = 3.986 × 105 km3/s2
+                                                          R = spacecraft’s distance from Earth’s center (km)
+                                                     Notice the negative sign in Equation (4.1.3-13). This sign is due to the
+                                                  convention we’re using, which defines R to be positive outward from
+                                                  Earth’s center. We know potential energy should increase as we raise a
+                                                  spacecraft to a higher orbit, so is this still consistent? Yes! As we raise our
+                                                  spacecraft’s orbit, R gets bigger, and PE gets less negative—which means
+                                                  it gets bigger too. Remember, for potential energy, –3 is a bigger quantity
+                                                  than –4 because it’s less negative. (This approach is analogous to heat: an
+                                                  ice cube at –3 degrees Celsius is “hotter” than one at –4 degrees Celsius.)
+                                                  At the extreme, when R reaches infinity (or close enough), PE approaches
+                                                  zero.
+                                                     One way to visualize this strange situation is to think about Earth’s
+                                                  center being at the bottom of a deep, deep well (Figure 4.1.3-24). At the
+                                                  bottom of the well, R is zero, so PE is at a minimum (its largest negative
+                                                  value, PE = –∞). As we begin to climb out of the well, our PE begins to
+                                                  increase (gets less negative) until we reach the lip of the well at R near
+                                                  infinity. At this point, our PE is effectively zero, and for all practical
+                                                  purposes, we have left Earth’s gravitational influence. Of course, we
+Figure 4.1.3-24. Potential Energy (PE). PE
+increases as we get farther from Earth’s center
+                                                  never really reach an “infinite” distance from Earth, but as we’ll see when
+by becoming less negative. It’s as if we’re       we discuss interplanetary travel, we essentially leave Earth’s “gravity
+climbing out of a deep well.                      well” at a distance of about one million km (621,400 mi.).
+
+                                                               4.1.3-19
+   If you have a 1 kg mass suspended above your head, how do you
+realize the “potential” of its energy? You let go! Gravity will then cause
+the mass to accelerate downward, so when it hits the ground (and
+hopefully not your head or your foot, enroute), it’s moving at
+considerable speed and thus has energy of a different kind—energy of
+motion, which we call kinetic energy. Similar to linear momentum, kinetic
+energy is solely a function of an object’s mass and its velocity.
+
+                                    1      2
+                               KE = --- mV                         (4.1.3-14)
+                                    2
+        where
+        KE = kinetic energy (kg km2/s2)
+        m = mass (kg)
+        V = velocity (km/s)
+   As we said, total mechanical energy in a conservative field (such as a
+gravitational field) stays constant. But, a spacecraft in orbit may get close
+to Earth during part of its orbit and be far away in another part. So, how
+does it maintain a constant mechanical energy? It must trade the potential
+energy it loses as it moves closer, for kinetic energy (increased velocity).
+Then, as it goes farther away, it trades back—kinetic energy goes down,         Figure 4.1.3-25. Mechanical Energy is
+as the potential energy goes up.                                                Conserved. The total mechanical energy, the
+                                                                                sum of kinetic and potential energy, is constant
+   The endless trade-off between PE and KE to make this happen goes on          in a conservative field. We can show this with a
+all around us—but we often don’t notice it. We’ve all played on a simple        simple swing. At the bottom of the arc, speed is
+playground swing like the one in Figure 4.1.3-25. As we swing back and          greatest and height is lowest; hence, KE is at
+                                                                                the maximum and PE is at a minimum. As the
+forth, we constantly trade between KE and PE. At the bottom of the arc,         swing rises to the top of the arc, KE trades for
+we are moving the fastest, so our KE is at a maximum and PE is at a             PE until it stops momentarily at the top where
+minimum. As we swing up, our speed diminishes until, at the top of the          PE is maximum and KE is zero.
+arc, we actually stop briefly. At this point, our KE is zero because we’re
+not moving (velocity is zero), but our PE is at a maximum. The reverse
+happens as we swing back, this time turning our PE back into energy of
+motion. If it weren’t for friction in the frame attachments and our own
+wind resistance, once we started on a swing, we’d swing forever even
+without “pumping.”
+   We can now combine KE and PE to get a new expression for the total
+mechanical energy of our orbiting spacecraft
+
+                                1      2 mµ
+                            E = --- m V – ---------                (4.1.3-15)
+                                2            R
+
+        where
+        E   = total mechanical energy (kg km2/s2)
+        m = mass (kg)
+        V = velocity (km/s)
+        µ   = gravitational parameter (km3/s2)
+        R   = position (km)
+
+                                                        4.1.3-20
+                                       Later we’ll use this expression to develop some useful tools for analyzing
+                                       orbital motion.
+
+
+
+
+Section Review
+ Key Concepts
+
+   A property is conserved if it stays constant in a system
+
+   In the absence of outside forces, linear and angular momentum are conserved
+
+   A conservative field, such as gravity, is one in which total mechanical energy is conserved
+
+   Total mechanical energy, E, is the sum of potential and kinetic energies
+   • Kinetic energy, KE, is energy of motion
+   • Potential energy, PE, is energy of position
+
+
+
+
+                                                    4.1.3-21
+      4.1.3.4 The Restricted Two-body
+                  Problem
+
+In This Section You’ll Learn to...
+     Explain the approach used to develop the restricted two-body
+     equation of motion, including coordinate systems and assumptions
+     Explain how the solution to the two-body equation of motion
+     dictates orbital geometry
+     Define and use the terms that describe orbital geometry
+
+   Earlier, we outlined a general approach to analyzing the motion of an
+object called the MAP, shown again in Figure 4.1.3-26. There we described
+the motion of a baseball. Now we can use the first three steps of this same
+method to understand the motion of any object in orbit. A special
+application of the MAP is the restricted two-body problem. Why restricted?
+As we’ll see later in this section, we must restrict our analysis with
+assumptions we need to make our lives easier. Why two bodies? That’s
+one of the assumptions. Why a problem? Finding an equation to
+represent this motion has been a classic problem solved and refined by
+students and mathematicians since Isaac Newton. In this section, we’ll
+rely on the work of the mathematicians who have come before us. So at
+the end of this section you’ll say, “The motion of two bodies? Hey, no
+problem!”
+
+Coordinate Systems
+                                                                              Figure 4.1.3-26. Motion Analysis Process
+   To be valid, Newton’s laws must be expressed in an inertial reference      (MAP) Checklist. Originally described in
+frame, meaning a frame that is not accelerating. To illustrate this, let’s    Section 4.1.3.1 (Figure 4.1.3-6), this process
+                                                                              applies to balls in flight or spacecraft in orbit.
+suppose we want to describe the flight of a baseball we toss and catch
+while we’re driving in our car. We see the ball go up and down with
+respect to us. But that’s not the whole story. Our car may be accelerating
+with respect to a police car behind us. Our car and the police car may be
+accelerating with respect to Earth’s surface. And of course we must
+consider Earth’s motion spinning on its axis, Earth’s motion around the
+Sun, the Sun’s motion in the Galaxy, the Galaxy’s motion through the
+universe, and the expansion of the universe! These are all accelerating
+frames of reference for the ball’s motion, which complicate our attempt to
+describe this motion using Newton’s laws.
+   So we can see how this reference frame stuff can get complicated very
+quickly. Indeed, from astronomical observations, it looks like everything
+in the universe is accelerating. So how can we find any purely non-
+accelerating reference? We can’t. To apply Newton’s laws to our ball, we
+must select a reference frame that’s close enough to, or “sufficiently,”
+inertial for our problem.
+
+                                                      4.1.3-22
+                                                     Any reference frame is just a collection of unit vectors at right angles to
+                                                  each other that allows us to specify the magnitude and direction of other
+                                                  vectors, such as a spacecraft’s position and velocity. This collection of unit
+                                                  vectors allows us to establish the components of vectors in 3-D space. By
+                                                  rigidly defining these unit vectors, we define a coordinate system.
+                                                     To create a coordinate system we need to specify four pieces of informa-
+                                                  tion—an origin, a fundamental plane, a principal direction, and a third axis,
+                                                  as shown in Figure 4.1.3-27. The origin defines a physically identifiable
+                                                  starting point for the coordinate system. The other three parameters fix the
+                                                  orientation of the frame. The fundamental plane contains two axes of the
+                                                  system. Once we know the plane, we can establish the first axis by defining
+                                                  a unit vector that starts at the origin and is perpendicular to this plane. The
+                                                  unit vector in this direction at the origin is one axis. Next, we need a prin-
+                                                  cipal direction within the plane, which we define by pointing a unit vector
+                                                  toward some visible, distant object, such as a star. Now that we have two
+                                                  directions (the principal direction and an axis perpendicular to the
+                                                  fundamental plane), we can find the third axis using the right-hand rule.
+
+
+
+
+                                                  Figure 4.1.3-27. Defining a Coordinate System. We define coordinate systems by
+                                                  selecting a convenient (1) origin; (2) fundamental plane containing the origin and an axis
+                                                  perpendicular to the plane; (3) principal direction within the plane; and (4) third axis using the
+
+                                                     Remember—coordinate systems should make our lives easier. If we
+                                                  choose the correct coordinate system, developing the equations of motion
+                                                  can be simple. If we choose the wrong system, it can be nearly impossible.
+                                                     For Earth-orbiting spacecraft, we’ll choose a tried-and-true system that
+                                                  we know makes solving the equations of motion relatively easy. This
+                                                  geocentric-equatorial coordinate system has these characteristics
+                                                     • Origin—Earth’s center (hence the name geocentric)
+                                                     • Fundamental plane—Earth’s equator (hence geocentric-equatorial).
+Figure 4.1.3-28. Vernal Equinox Direction.
+The vernal equinox direction is the principal          Perpendicular to the plane—North Pole direction
+direction for the geocentric-equatorial coordi-      • Principal direction—vernal equinox direction found by drawing a line
+nate system. It’s found by drawing a line from
+Earth through the Sun on the first day of              from Earth to the Sun on the first day of Spring, as shown in Figure
+Spring, usually March 21.                              4.1.3-28. While this direction may not seem “convenient” to you, it’s
+
+                                                                   4.1.3-23
+     significant to astronomers who originally defined the system. Plus it
+     beats any alternatives by a long way, mostly because they move.
+  • Third axis found using the right-hand rule
+Figure 4.1.3-29 shows the entire coordinate system.
+
+Equation of Motion
+  Using the geocentric-equatorial coordinate system, we can safely apply
+Newton’s Second Law to examine the external forces affecting the system,
+or in this case, a spacecraft. So let’s place ourselves on an imaginary
+spaceship in orbit around Earth and see if we can list the forces on our ship.
+                                                                                         Figure    4.1.3-29. Geocentric-equatorial
+  • Earth’s gravity (Newton wouldn’t let us forget this one)                             Coordinate System. We define this system by
+  • Drag—if we’re a little too close to the atmosphere                                       • Origin—Earth’s center
+
+  • Thrust—if we fire rockets                                                                • Fundamental plane—equatorial plane
+                                                                                             • Perpendicular to plane—North Pole
+  • 3rd body—gravity from the Sun, Moon, or planets
+                                                                                             • Principal direction—vernal equinox ( )
+  • Other—just in case we miss something                                                 We use this coordinate system for analyzing
+                                                                                         the orbits of Earth-orbiting spacecraft.
+Summing all these forces, shown in Figure 4.1.3-30, we get with the
+following equation of motion
+
+∑F   external   = F gravity + F drag + F thrust + F 3rd body + F other = ma (4.1.3-16)
+
+   If we substituted mathematical expressions for the various forces and
+tried to devise a solution to the equation, we would create a difficult
+problem—not to mention an enormous headache. So let’s examine some
+reasonable assumptions we can make to simplify the problem.
+
+Simplifying Assumptions
+   Luckily, we can assume some things about orbital motion that will
+simplify the problem, but they will “restrict” our solution to cases in
+which these assumptions apply. Fortunately, this includes most of the                    Figure 4.1.3-30. Possible Forces on a
+situations we’ll use. Let’s consider the forces on a spacecraft in orbit and             Spacecraft. We can brainstorm all the possible
+                                                                                         forces on a spacecraft to include Earth’s
+assume                                                                                   gravity, drag, thrust, third-body gravity, and
+                                                                                         other forces.
+  • The spacecraft travels high enough above Earth’s atmosphere that
+    the drag force is small, F drag ≅ 0
+  • The spacecraft won’t maneuver or change its path, so we ignore the
+    thrust force, F thrust ≅ 0
+  • We are considering the motion of the spacecraft close to Earth, so we
+    ignore the gravitational attraction of the Sun, the Moon, or any other
+    third body, F 3rd body ≅ 0 . (That’s why we call this the two-body
+    problem.)
+  • Compared to Earth’s gravity, other forces such as those due to solar
+    radiation, electromagnetic fields, etc., are negligible, F other ≅ 0
+
+                                                               4.1.3-24
+                                                     • Earth’s mass is much, much larger than the mass of any spacecraft,
+                                                       mEarth >> mspacecraft
+                                                     • Earth is spherically symmetrical with uniform density, so we treat it
+                                                       as a point mass. Thus, we mathematically describe Earth’s gravity as
+                                                       acting from its center.
+                                                     • The spacecraft’s mass is constant, ∆m = 0, so Equation (4.1.3-7),
+                                                       applies
+                                                     • The geocentric-equatorial coordinate system is sufficiently inertial, so
+                                                       that Newton’s laws apply
+                                                     After all these assumptions, we’re left with gravity as the only force, so
+                                                   our equation of motion becomes         ∑F    external   = F gravity = ma , as shown in
+                                                   Figure 4.1.3-31. Now we can apply Newton’s Law of Universal
+                                                   Gravitation in vector form
+
+                                                                                               µm R
+Figure 4.1.3-31. The Force of Gravity. In the                                                         - ----
+                                                                                 F gravity = – --------                        (4.1.3-17)
+                                                                                                R R
+restricted two-body problem, we reduce the                                                           2
+forces acting on a spacecraft to a single force—
+Earth’s gravity.                                     Substituting the force of gravity equation into the equation of motion,
+                                                   we get
+                                                                                                             ..
+                                                                                        µm R
+                                                                                               -
+                                                                          F gravity = – --------   -
+                                                                                                 --- = ma = mR
+                                                                                         R R
+                                                                                              2
+
+
+                                                   and dividing both sides by m, we arrive at the restricted two-body equation
+                                                   of motion
+                                                                                    ..
+                                                                                         µ R
+                                                                                    R + -----2- ---- = 0                       (4.1.3-18)
+                                                                                        R R
+                                                           where
+                                                           ..
+                                                           R = spacecraft’s acceleration (km/s2)
+                                                           µ   = gravitational parameter (km3/s2) = 3.986 × 105 km3/s2 for
+                                                                 Earth
+                                                           R = spacecraft’s position vector (km)
+                                                           R   = magnitude of the spacecraft’s position vector (km)
+                                                   [Note: we use the engineering ..convention for the second derivative of R
+                                                   with respect to time, which is R , better known as acceleration, a .]
+                                                      What can the two-body equation of motion tell us about the movement
+                                                   of a spacecraft around Earth? Unfortunately, in its present form—a
+                                                   second-order, non-linear, vector differential equation—it doesn’t help us
+                                                   visualize anything about this movement. So what good is it? To
+                                                   understand the significance of the two-body equation of motion, we must
+                                                   first “solve” it, using a rather complex mathematical derivation. When
+                                                   the smoke clears, we’re left with an expression for the magnitude of the
+
+                                                               4.1.3-25
+position vector (not the velocity) of an object in space in terms of some
+odd, new variables.
+                                              k1
+                               R = ----------------------------
+                                   1 + k 2 cos ν
+
+        where
+        R = magnitude of the spacecraft’s position vector, R
+        k1 = constant that depends on µ, R , and V
+        k2 = constant that depends on µ, R , and V
+        ν = (Greek letter “nu”) polar angle measured from an orbit’s
+             principal axis to R
+   This equation is the solution to the restricted, two-body equation of
+motion and describes the spacecraft’s location, R, in terms of two
+constants and a polar angle, ν. You may recognize that this equation also
+represents a general relationship for any circle, ellipse, parabola, or
+hyperbola—commonly known as conic sections, shown in Figure 4.1.3-32.
+Now, here’s the really significant part of all this—we just proved Kepler’s
+Laws of Planetary Motion! Based on Brahe’s data, Kepler showed that the
+planets’ orbits were ellipses but couldn’t say why. We’ve just shown why:
+any object moving in a gravitational field must follow one of the conic
+sections. In the case of planets or spacecraft in orbit, this path is an ellipse
+or a circle (which is just a special case of an ellipse).
+   Now that we know orbits must follow conic section paths, we can look
+at some ways to describe the size and shape of an orbit.
+
+Orbital Geometry                                                                   Figure 4.1.3-32. Conic Sections. The
+                                                                                   solution to the restricted, two-body equation of
+   Because we’re mainly interested in spacecraft orbits, which we know             motion gives the polar equation for a conic
+                                                                                   section. Conic sections are found by slicing
+are elliptical, let’s look closer at elliptical geometry. Using Figure 4.1.3-33    right cones at various angles.
+as a reference, let’s define some important geometrical parameters for an
+ellipse.
+  • R is the radius from the focus of the ellipse (in this case, Earth’s
+    center) to the spacecraft
+  • F and F' are the primary (occupied) and vacant (unoccupied) foci.
+    Earth’s center is at the occupied focus.
+  • Rp is the radius of periapsis (radius of the closest approach of the
+    spacecraft to the occupied focus); it’s called the radius of perigee when
+    the orbit is around Earth
+  • Ra is the radius of apoapsis (radius of the farthest approach of the
+    spacecraft to the occupied focus); it’s called the radius of apogee when
+    the orbit is around Earth
+  • 2a is the major axis or the length of the ellipse. One-half of this is “a,”
+    or the semimajor axis (semi means one half).
+
+                                                                  4.1.3-26
+                                                                                 R = spacecraft’s position vector, measured from
+                                                                                      Earth’s center
+                                                                                 V = spacecraft’s velocity vector
+                                                                                 F and F' = primary and vacant foci of the ellipse
+                                                                                 Rp = radius of perigee (closest approach)
+                                                                                 Ra = radius of apogee (farthest approach)
+                                                                                 2a = major axis
+                                                                                 2b = minor axis
+                                                                                 2c = distance between the foci
+                                                                                 a = semimajor axis
+                                                                                 b = semiminor axis
+                                                                                 ν = true anomaly
+                                                                                 φ = flight-path angle
+
+Figure 4.1.3-33.   Geometry of an Elliptical Orbit. With these parameters, we completely define the size and shape of the orbit.
+
+                                                                                           Ra + Rp
+                                                                                       a = -------------------                     (4.1.3-19)
+                                                                                                   2
+
+                                                      • 2b is the minor axis or width of the ellipse. One-half of this is “b,” or
+                                                        the semiminor axis.
+                                                      • 2c is the distance between the foci, Ra – Rp
+                                                      • ν is the true anomaly or polar angle measured from perigee to the
+                                                        spacecraft’s position vector, R , in the direction of the spacecraft’s
+                                                        motion. It locates the spacecraft in the orbit. For example, if ν = 180°
+                                                        the spacecraft is 180° from perigee, putting it at apogee. The range for
+                                                        true anomaly is 0° to 360°.
+                                                      • φ is the flight-path angle, measured from the local horizontal to the
+                                                        velocity vector, V . At the spacecraft the local horizontal is a line
+                                                        perpendicular to the position vector, R . When the spacecraft travels
+                                                        from perigee to apogee (outbound), its velocity vector is always
+                                                        above the local horizon (gaining altitude), so φ > 0°. When it travels
+                                                        from apogee to perigee (inbound), its velocity vector is always below
+                                                        the local horizon (losing altitude), so φ < 0°. At exactly perigee and
+                                                        apogee of an elliptical orbit, the velocity vector is parallel to the local
+                                                        horizon, so φ = 0. The maximum value of the flight-path angle is 90°.
+                                                      • e is the eccentricity, which is the ratio of the distance between the foci
+                                                        (2c) to the length of the ellipse (2a)
+                                                                                                2c
+                                                                                            e = ------
+                                                                                                2a
+
+                                                                  4.1.3-27
+  • Eccentricity defines the shape or type of conic section. Eccentricity is a
+    medieval term representing a conic’s degree of noncircularity
+    (meaning “out of center”). Because circular motion was once
+    considered perfect, any deviation was abnormal, or eccentric (maybe
+    you know someone like that). Because the distance between the foci in
+    an ellipse is always less than the length of the ellipse, its eccentricity is
+    between 0 and 1. A circle has e = 0. A very long, narrow ellipse has e
+    approaching 1. A parabola has e = 1 and a hyperbola has e > 1.
+   With all these geometrical parameters defined, let’s look at our polar
+equation of a conic and substitute for the constants k1 = a (1 – e2) and
+k2 = e. Thus, we have
+                                                               2
+                                             a(1 – e )
+                                       R = -------------------------                         (4.1.3-20)
+                                           1 + e cos ν
+       where
+       R = magnitude of the spacecraft’s position vector (km)
+       a = semimajor axis (km)
+       e = eccentricity (unitless)
+       ν = true anomaly (deg or rad)
+  To determine the distances at closest approach, Rp, and farthest
+approach, Ra, we can use this equation.
+                                                                   2
+                                            a(1 – e )
+                At ν = 0°, R = Rp = ------------------------------------- = a (1 – e)
+                                    ( 1 + e cos ( 0° ) )
+
+                                                                       2
+                                              a(1 – e )
+             At ν = 180°, R = Ra = ------------------------------------------- = a (1 + e)
+                                   ( 1 + e cos ( 180° ) )
+                                                                                                          Figure 4.1.3-34. Circle. A circle is just a
+   Looking at the geometry of an ellipse, we can see that the length of the                               special case of an ellipse.
+ellipse, 2a, equals (Ra + Rp), and the distance between the foci, 2c, is (Ra –
+Rp). Now, if we want to compute the orbit’s eccentricity based on the radii
+of perigee and apogee, we can use the second part of Equation (4.1.3-21).
+
+                                        2c       Ra – Rp
+                                    e = ------ = ------------------
+                                                                  -                          (4.1.3-21)
+                                        2a       Ra + Rp
+   Parameters for the ellipse also apply to circular orbits, parabolic
+trajectories, and hyperbolic trajectories. Figure 4.1.3-34 shows a circular
+orbit, where the radius from Earth’s center is constant and equal to the
+semimajor axis. Therefore, this orbit has no apogee or perigee, and its
+eccentricity is zero. The flight path angle is always zero.
+   The parabola in Figure 4.1.3-35 represents a minimum escape trajectory
+or a path that just barely takes a spacecraft away from Earth, never to
+return. So there is no apogee and no empty focus. Thus, the semimajor
+axis and the distance between the foci are infinite. We say the eccentricity,
+e = 1. The true anomaly ranges from 0° to less than 180° on the outbound
+path. The flight path angle is greater than zero. Of course, if a spacecraft is                           Figure 4.1.3-35. Parabola. A parabolic
+inbound on a parabolic trajectory, its true anomaly is greater than 180°                                  trajectory is a special case which leaves Earth
+
+                                                                              4.1.3-28
+                                                     until it passes perigee, then it resets to 0° and grows to almost 180°. And
+                                                     its flight path angle is less than zero until it passes perigee.
+                                                        The hyperbola in Figure 4.1.3-36 also represents an escape trajectory, so
+                                                     it also has no apogee. It’s an unusual shape with a different sign
+                                                     convention. Because the length of the hyperbola (distance between the
+                                                     “ends”) bends back on itself, or is measured outside the conic, we define
+                                                     this distance, 2a, as negative. The same convention also applies for the
+                                                     distance between the foci, 2c, so 2c is also negative. But the magnitude of
+                                                     2c is always larger than the magnitude of 2a, so the eccentricity is greater
+                                                     than 1.0. The true anomaly ranges from 0° to less than 180° on the
+                                                     outbound path and greater than 180° to 0° on the inbound path. The flight
+                                                     path angle is greater than 0° on the outbound path and less than 0° on the
+Figure 4.1.3-36. Hyperbola. We use a                 inbound path. Table 4.1.3-1 summarizes these parameters.
+hyperbolic trajectory for interplanetary missions.
+Notice a real trajectory is around the occupied      Table 4.1.3-1. A Summary of Parameters for Conic Sections.
+focus and an imaginary, mirror-image trajectory
+is around the vacant focus.                                             a = Semimajor    c = One-half the Distance
+                                                      Conic Section     Axis             between Foci                e = Eccentricity
+
+                                                      circle            a>0              c=0                         e=0
+
+                                                      ellipse           a>0              0<c<a                       0<e<1
+
+                                                      parabola          a=∞              c=∞                         e=1
+
+                                                      hyperbola         a<0              |a| < |c| > 0               e>1
+
+
+
+
+                                                                  4.1.3-29
+Section Review
+ Key Concepts
+
+   Combining Newton’s Second Law and his Law of Universal Gravitation, we form the restricted two-body
+   equation of motion
+   • The coordinate system used to derive the two-body equation of motion is the geocentric-equatorial
+     system
+     - Origin—Earth’s center
+     - Fundamental plane—equatorial plane
+     - Direction perpendicular to the plane—North Pole direction
+     - Principal direction—vernal equinox direction
+   • In deriving this equation, we assume
+      - Drag force is negligible
+      - Spacecraft is not thrusting
+      - Gravitational pull of third bodies and all other forces are negligible
+      - mEarth >> mspacecraft
+      - Earth is spherically symmetrical and of uniform density and we can treat it mathematically as a point
+        mass
+      - Spacecraft mass is constant, so ∆m = 0
+      - The geocentric-equatorial coordinate system is sufficiently inertial for Newton’s laws to apply
+
+   Solving the restricted two-body equation of motion results in the polar equation for a conic section
+
+   Figure 4.1.3-33 shows parameters for orbital geometry, and Table 4.1.3-1 summarizes parameters for conic
+   sections
+
+
+
+
+                                                    4.1.3-30
+   4.1.3.5 Constants of Orbital Motion
+
+In This Section You’ll Learn to...
+     Define the two constants of orbital motion—specific mechanical
+     energy and specific angular momentum
+     Apply specific mechanical energy to determine orbital velocity and
+     period
+     Apply the concept of conservation of specific angular momentum
+     to show an orbital plane remains fixed in space
+
+
+   By now you’re probably convinced that, with all these flight-path
+angles, true anomalies, and ellipses flying around, there is nothing
+consistent about orbits. Well, take heart because we do have constants in
+astrodynamics. We saw in our discussion of motion in a conservative field
+that mechanical energy and momentum are conserved. Because orbital
+motion occurs in a conservative gravitational field, spacecraft conserve
+mechanical energy and angular momentum. So, now let’s see how these
+principles provide valuable tools for studying orbital motion.
+
+Specific Mechanical Energy
+   In an earlier section, we referred to equations of motion being like
+crystal balls, in that they allow us to gaze into the future to predict where
+an object will be. Mechanical energy provides us with one such crystal
+ball. Recall in defining mechanical energy, we add potential energy, PE, to
+kinetic energy, KE. Together, they form a relationship between a
+spacecraft’s mass, m, its position, R, its velocity, V, and the local
+gravitational parameter, µ (3.986 × 105 km3/s2 for Earth).
+                                 1     2 µm
+                             E = --- mV – ---------                (4.1.3-22)
+                                 2           R
+   To generalize this equation, so we don’t have to worry about mass, let’s
+divide both sides of the equation by m. Doing so defines a new flavor of
+mechanical energy called specific mechanical energy, ε, which doesn’t
+depend on mass. Thus, we can talk about the energy in a particular orbit,
+whether the orbiting object is a golf ball or the International Space
+Station. Specific mechanical energy, ε, is simply the total mechanical
+energy divided by a spacecraft’s mass
+                                         E
+                                    ε ≡ -----                      (4.1.3-23)
+                                        m
+where ≡ means “defined as,” or
+                                         2
+                                    V µ
+                                ε = ------ – ----                  (4.1.3-24)
+                                      2 R
+
+             4.1.3-31
+        where
+        ε = spacecraft’s specific mechanical energy (km2/s2)
+        V = spacecraft’s velocity (km/s)
+        µ = gravitational parameter (km3/s2) = 3.986 × 105 km3/s2 for
+            Earth
+        R = spacecraft’s distance from Earth’s center (km)
+    Because the specific mechanical energy is conserved, it must be the
+same at any point along an orbit! As a spacecraft approaches apogee, it is
+gaining altitude, meaning its R, or distance from Earth’s center, increases.
+This increase in R means it gains potential energy—which actually means
+the potential energy (PE) gets less negative (because of the way we define
+it). At the same time, the spacecraft’s speed is decreasing and hence it is
+losing kinetic energy (KE). When it reaches the highest point, its PE is at a
+maximum. However, because its speed is the slowest at apogee, KE is at a
+minimum. But the sum of PE and KE—specific mechanical energy—
+remains constant.
+    As the spacecraft passes apogee and starts toward perigee, it begins to
+trade its PE for KE. So, its speed steadily increases until it reaches perigee,
+where its speed is fastest and its KE is maximum. Again, the sum of               Figure 4.1.3-37. Trading Energy in an
+                                                                                  Orbit. An orbit is just like a swing. PE and KE
+potential and kinetic energy—specific mechanical energy—remains                   trade-off throughout the orbit, so their sum is
+constant. Figure 4.1.3-37 illustrates these relationships.                        constant.
+    The fact that the specific mechanical energy is constant gives us a
+tremendously powerful tool for analyzing orbits. Look again at the
+relationship for specific mechanical energy, ε. Notice that ε depends only
+on position, R, velocity, V, and the local gravitational parameter, µ. This
+means if we know a spacecraft’s position and velocity at any point along its
+orbit, we know its specific mechanical energy for every point on its orbit.
+    Another important concept to glean out of the constancy of orbital
+energy is the relationship between R and V. Assume we know the energy
+for an orbit. Then, at any given position, R, on that orbit, there is only one
+possible velocity, V! Thus, if we know the orbital energy and R, we can
+easily find the velocity at that point. Simply rearranging the relationship
+for energy gives us an extremely useful expression for velocity.
+
+                                         µ
+                              V =    2  ---- + ε                   (4.1.3-25)
+                                       R        
+        where
+        V = spacecraft’s velocity (km/s)
+        µ = gravitational parameter (km3/s2) = 3.986 × 105 km3/s2 for
+            Earth
+        R = spacecraft’s distance from Earth’s center (km)
+        ε = spacecraft’s specific mechanical energy (km2/s2)
+   We often use this equation to determine velocities while analyzing
+orbits. For example, during space missions we often have to move space-
+craft from one orbit to another. We can use this relationship to determine
+how much we must change the velocity to “drive” over to the new orbit.
+
+                                                         4.1.3-32
+   Recall from our discussion of conic-section geometry, one parameter
+represents a spacecraft’s mean, or average, distance from the primary
+focus. This parameter is the semimajor axis, a. We can develop a new
+relationship for specific mechanical energy which depends only on a and µ.
+                                         µ
+                                  ε = – ------                        (4.1.3-26)
+                                        2a
+        where
+        ε = spacecraft’s specific mechanical energy (km2/s2)
+        µ = gravitational parameter (km3/s2) = 3.986 × 105 km3/s2 for
+            Earth
+        a = semimajor axis (km)
+This means simply knowing the semimajor axis of a spacecraft’s orbit tells
+us its specific mechanical energy. We can also learn the type of trajectory
+from the sign of the specific mechanical energy, ε. For a circular or elliptical
+orbit, ε is negative (because a is positive). For a parabola, ε = 0 (because a =
+∞). For a hyperbola, ε is positive (because a is negative). These are
+important points to keep in mind as we work orbital problems. If the sign
+for ε is wrong, the answer probably will be wrong.
+   Another benefit to knowing a value for energy is that we can
+determine orbital period. The orbital period, P, is the time it takes for a
+spacecraft to revolve once around its orbit. From Kepler’s Third Law of
+Planetary Motion, P2 is proportional to a3, where “a,” is the semimajor
+axis. Using this relationship, we can derive an expression for the orbital
+period
+
+                                                 3
+                                        a
+                                           -
+                                 P = 2π ----
+                                         µ                            (4.1.3-27)
+
+        where
+        P = period (seconds)
+        π = 3.14159. . .(unitless)
+        a = semimajor axis (km)
+        µ = gravitational parameter (km3/s2) = 3.986 × 105 km3/s2 for
+            Earth
+   Notice that period only has meaning for “closed” conics (circles or
+ellipses). Period is infinite for a parabola, whose semimajor axis is infinite,
+and it’s an imaginary number for a hyperbola, whose semimajor axis is
+negative.
+   Specific mechanical energy, ε, is a very valuable constant of spacecraft
+motion. With a single observation of position and velocity, we learn much
+about a spacecraft’s orbit.
+   But ε gives us only part of the story. It tells us the orbit’s size but
+doesn’t tell us anything about where the orbit is in space. For insight into
+that important bit of information we need to look at the angular
+momentum.
+
+             4.1.3-33
+Specific Angular Momentum
+ Recall from our discussion in Section 4.1.3.2 that we can find angular
+momentum from Equation (4.1.3-3).
+
+                               H = R × mV
+Once again, to uncomplicate our life, we divide both sides of the equation
+by the mass, m, of the object we’re investigating. Doing this, we define the
+specific angular momentum, h , as
+                                      H
+                                  h ≡ -----
+                                      m
+        where
+        ≡ means “defined as,” or
+
+                                h = R×V                           (4.1.3-28)
+
+        where
+        h = spacecraft’s specific angular momentum vector (km2/s)
+        R = spacecraft’s position vector (km)
+        V = spacecraft’s velocity vector (km/s)
+
+   Notice that specific angular momentum is the result of the cross
+product between two vectors: position and velocity. Recall from geometry
+that any two lines define a plane. So in this case, R and V are two lines
+(vectors having magnitude and direction) that define a plane. We call this
+plane containing R and V , the orbital plane. Because the cross product of
+any two vectors results in a third vector that is perpendicular to the first   Figure        4.1.3-38. Specific        Angular
+                                                                               Momentum. The specific angular momentum
+two, the angular momentum vector h must be perpendicular to R and              vector, h , is perpendicular to the orbital plane
+V . Figure 4.1.3-38 shows R , V , and h .                                      defined by R and V .
+   Here’s where we need to apply a little deductive reasoning and
+consider the logical consequence of the facts we know to this point. First
+of all, as we saw in Section 4.1.3.3, angular momentum and, hence,
+specific angular momentum are constant in magnitude and direction.
+Second, R and V define the orbital plane. Next, h is perpendicular to
+the orbital plane. Therefore, if h is always perpendicular to the orbital
+plane, and h is constant, the orbital plane must also be constant. This
+means that in our restricted, two-body problem the orbital plane is
+forever frozen in inertial space! However, in reality, slight disturbances
+cause the orbital plane to change gradually over time.
+
+
+
+
+                                                       4.1.3-34
+Section Review
+ Key Concepts
+
+   In the absence of any force other than gravity, two quantities remain constant for an orbit
+   • Specific mechanical energy, ε
+   • Specific angular momentum, h
+
+   Specific mechanical energy, ε, is defined as ε ≡ E/m
+   • ε < 0 for circular and elliptical orbits
+   • ε = 0 for parabolic trajectories
+   • ε > 0 for hyperbolic trajectories
+   Specific angular momentum, h is defined as h ≡ H ⁄ m
+   • It is constant for an orbit
+   • Because h is constant, orbital planes are fixed in space (neglecting orbital perturbations)
+
+
+
+
+                                                    4.1.3-35
+References
+Bate, Roger R., Donald D. Mueller and Jerry E. White.
+   Fundamentals of Astrodynamics. New York, NY:
+   Dover Publications, Inc., 1971.
+Boorstin, Daniel J. The Discoverers. Random House,
+  1983.
+Concepts in Physics. Del Mar, CA: Communications
+  Research Machines, Inc., 1973.
+Feynman, Richard P., Robert B. Leighton, and Matthew
+  Sands. The Feynman Lectures on Physics. Reading,
+  MA: Addison-Wesley Publishing Co., 1963.
+Gonick, Larry and Art Huffman. The Cartoon Guide to
+  Physics. New York, NY: HarperCollins Publishers,
+  1990.
+Hewitt, Paul G. Conceptual Physics... A New Introduction
+  to Your Environment. Boston, MA: Little, Brown and
+  Company, 1981.
+King-Hele, Desmond. Observing Earth Satellites. New
+  York, NY: Van Nostrand Reinhold Company, Inc.,
+  1983.
+Szebehely, Victor G. Adventures in Celestial Mechanics.
+   Austin, TX: University of Texas Press, 1989.
+Thiel, Rudolf. And There Was Light. New York: Alfred A
+  Knopf, 1957.
+Young, Louise B., Ed., Exploring the Universe. Oxford,
+  MA: Oxford University Press, 1971.
+
+
+
+
+                                                           36
+
