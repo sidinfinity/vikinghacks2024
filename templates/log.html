@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="alert">
+    {% for message in get_flashed_messages() %}
+       {{ message }}
+    {% endfor %}
+        </div>
+
+    <pre>{{ content }}</pre>
+
+
+</body>
+</html>
