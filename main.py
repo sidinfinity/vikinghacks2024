@@ -67,10 +67,21 @@ def process_user_input(userText):
 
 @app.route('/topic/phet/<int:topic_id>')
 def phet_detail(topic_id):
+    print("hello")
     topic = next((t for t in getTopics() if t.id == topic_id), None)
     
     if topic:
         return render_template('phet_detail.html', item=topic)
+    else:
+        return "Topic not found", 404
+
+@app.route('/topic/pdf/<int:topic_id>')
+def pdf_detail(topic_id):
+    print("hello pdf")
+    topic = next((t for t in getTopics() if t.id == topic_id), None)
+    
+    if topic:
+        return render_template('pdf_detail.html', item=topic)
     else:
         return "Topic not found", 404
 
