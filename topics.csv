@@ -1,4 +1,4 @@
 id,topic,pdfdir,img,desc,phet
 1,Orbital Motion,https://www.henry.k12.ga.us/cms/lib08/GA01000549/Centricity/Domain/463/cpte05.pdf,/static/images/orb.jpeg, This is Orbital Motion,https://phet.colorado.edu/sims/html/my-solar-system/latest/my-solar-system_en.html
-2,Projectile Motion,/static/pdfs/new1.txt,/static/pdfs/proj.jpeg,This is Projectile Motion
+2,Projectile Motion,https://www.faa.gov/sites/faa.gov/files/about/office_org/headquarters_offices/avs/III.4.1.3_Understanding_Orbits.pdf,/static/pdfs/proj.jpeg,This is Projectile Motion,https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_lab.html
 
