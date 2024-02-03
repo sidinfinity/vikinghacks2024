@@ -50,7 +50,9 @@ def topic_detail(topic_id):
 def get_bot_response():
     # Retrieve the user's text from query parameters
     os.environ["OPENAI_API_KEY"] = "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"
-    userText = request.args.get('msg')
+    topic = next((t for t in getTopics() if t.id == int(request.args.get("topic_id"))), None)
+    userText = "You are a chatbot for a learning website. Only answer what the user explicitly asks. Especially don't talk about the lab if the user doesn't mention the lab. The user will ask questions about various topics and this is the current topic: " + topic.topic
+    userText = userText + " This is the user's query: " + request.args.get('msg')
     print(userText)
     
     # Placeholder for where you would process the userText to generate a response

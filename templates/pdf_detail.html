@@ -104,6 +104,7 @@
                 </div>
             </div>
             <script>
+                var topicId = "{{item.id}}";
                 function getBotResponse() {
                     var rawText = $("#textInput").val();
                     var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
@@ -112,7 +113,7 @@
                     document
                         .getElementById("userInput")
                         .scrollIntoView({ block: "start", behavior: "smooth" });
-                    $.get("/get", { msg: rawText }).done(function (data) {
+                    $.get("/get", { msg: rawText , topic_id: topicId}).done(function (data) {
                         var botHtml = '<p class="botText"><span>' + data + "</span></p>";
                         $("#chatbox").append(botHtml);
                         document

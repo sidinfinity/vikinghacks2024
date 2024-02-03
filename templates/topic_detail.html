@@ -22,18 +22,38 @@
   <!-- Custom Styles -->
   <style>
     .item_detail-box {
-      padding-left: 50px; /* Adjust this value as needed */
+      padding-left: 100px; /* Adjust this value as needed */
     }
   </style>
 </head>
-
-<body>
-    
+</div>
+<div class="col-md-7">
+    <style>
+      .item_detail-box {
+        margin-left: auto; /* Pushes the section to the right */
+      width: 60%; /* Adjust width as needed */
+      }
+    </style>
+    <div class="item_detail-box">
+      <h2>{{ item.topic }}</h2>
+      
+     
+     
+     
+    </div>
+    <p class="item_description">
+      {{ item.desc }}
+    </p>
+  </div>
+<div>
+   
 
   <!-- Item Detail Section -->
   <style>
     .item_section {
         margin-top: 100px; /* Adjust this value to move the section lower */
+        padding-left: 1000
+px; /* Adjust this value as needed */
     }
   </style>
   
@@ -46,27 +66,12 @@
           </div>
         </div>
         
-        <div class="col-md-7">
-          <style>
-            .item_detail-box {
-              margin-left: auto; /* Pushes the section to the right */
-            width: 60%; /* Adjust width as needed */
-            }
-          </style>
-          <div class="item_detail-box">
-            <h2>{{ item.topic }}</h2>
-            
-           
-           
-           
-          </div>
-          <p class="item_description">
-            {{ item.desc }}
-          </p>
-        </div>
+        
       </div>
     </div>
   </section>
+
+  
 <!--1️⃣ code CSS below -->
 
 <style>
