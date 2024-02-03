@@ -1,0 +1,4 @@
+id,topic,pdfdir,img
+1,projectile motion,/static/pdfs/proj.txt,
+2,newton law 1,/static/pdfs/new1.txt,
+3,newton law 2,/static/pdfs/new2.txt,
