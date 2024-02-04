@@ -601,6 +601,10 @@ a:focus {
   }
 }
 
+.row-sm-6, .row-md-4, .row-lg-3, .mb-5{
+  background-color: rgba(0,0,0,0);
+}
+
 // end contact section
 h6.item_center{
   text-align: center;
@@ -794,6 +798,10 @@ h6.item_center{
 
 .footer_section a {
   color: #cbc9c9;
+}
+
+*{
+  background-color: rgba(0,0,0,0);
 }
 
 /* end footer section*/
