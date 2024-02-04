@@ -26,49 +26,48 @@
     }
   </style>
 </head>
-</div>
-<div class="col-md-7">
-    <style>
-      .item_detail-box {
-        margin-left: auto; /* Pushes the section to the right */
-      width: 60%; /* Adjust width as needed */
-      }
-    </style>
-    <div class="item_detail-box">
-      <h2>{{ item.topic }}</h2>
-      
-     
-     
-     
-    </div>
-    <p class="item_description">
-      {{ item.desc }}
-    </p>
-  </div>
-<div>
-   
 
   <!-- Item Detail Section -->
   <style>
     .item_section {
         margin-top: 100px; /* Adjust this value to move the section lower */
-        padding-left: 1000
-px; /* Adjust this value as needed */
+        position: center; 
+    }
+    .centered {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      text-align: center;
     }
   </style>
-  
-  <section class="item_section layout_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="item_img-box">
-            <img src="{{item.img}}" alt="Item Image">
-          </div>
-        </div>
-        
-        
-      </div>
+
+<body>  
+  <section class="item_section">
+    <div class="centered">
+        <img src="{{item.img}}" alt="Item Image">
     </div>
+    <div class="centered" >
+          <h2>{{ item.topic }}</h2>
+    </div>
+    <div class="centered">
+      <p>
+        {{ item.desc }}
+      </p>
+    </div>
+    </div>
+    <div class="centered">
+      <a href="phet/{{item.id}}">
+          <button class="btn">Phet Lab</button>
+        </a>
+      </div>
+      <br></br>
+      <div class="centered">
+        <a href="pdf/{{item.id}}">
+            <button class="btn">Pdf Reader</button>
+          </a>
+        </div>
+
   </section>
 
   
@@ -109,15 +108,12 @@ px; /* Adjust this value as needed */
     </style>
     
     <!-- 2️⃣code HTML below -->
-    <a href="phet/{{item.id}}">
-        <button class="btn">Phet Lab</button>
-      </a>
+    
    
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
         
         .btn{
-        
         font-family: Roboto, sans-serif;
         font-weight: 0;
         font-size: 14px;
@@ -148,9 +144,6 @@ px; /* Adjust this value as needed */
         </style>
         
         <!-- 2️⃣code HTML below -->
-        <a href="pdf/{{item.id}}">
-            <button class="btn">Pdf Reader</button>
-          </a>
   
   
   
