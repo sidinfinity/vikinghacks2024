@@ -31,7 +31,6 @@
   <style>
     .item_section {
         margin-top: 100px; /* Adjust this value to move the section lower */
-        position: center; 
     }
     .centered {
       display: block;
@@ -40,13 +39,17 @@
       width: 50%;
       text-align: center;
     }
+
+    .horizontal-center {
+      margin: 0 auto;
+    }
+
   </style>
 
 <body>  
   <section class="item_section">
-    <div class="centered">
-        <img src="{{item.img}}" alt="Item Image">
-    </div>
+    <img src="{{item.img}}" alt="Item Image" class="centered">
+    <br></br>
     <div class="centered" >
           <h2>{{ item.topic }}</h2>
     </div>
@@ -55,18 +58,20 @@
         {{ item.desc }}
       </p>
     </div>
-    </div>
-    <div class="centered">
+
+    <button class="btn horizontal-center">
       <a href="phet/{{item.id}}">
-          <button class="btn">Phet Lab</button>
-        </a>
-      </div>
-      <br></br>
-      <div class="centered">
-        <a href="pdf/{{item.id}}">
-            <button class="btn">Pdf Reader</button>
-          </a>
-        </div>
+        Phet Lab
+      </a>
+    </button>
+
+    <br></br>
+
+    <button class="btn horizontal-center">
+      <a href="pdf/{{item.id}}">
+        Pdf Reader
+      </a>
+    </button>
 
   </section>
 
