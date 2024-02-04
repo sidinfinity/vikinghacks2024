@@ -785,6 +785,9 @@ a:focus {
   margin-top: 15px;
   text-transform: uppercase;
 }
+h6.item_center{
+  text-align: center;
+}
 
 .info_section .row > div {
   margin-top: 25px;
