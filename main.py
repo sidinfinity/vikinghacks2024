@@ -10,7 +10,7 @@ df = pd.read_csv('topics.csv')
 
 app = Flask(__name__, template_folder='templates')
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 storage_context = StorageContext.from_defaults(persist_dir="chatbot/storage")
 index = load_index_from_storage(storage_context)
 query_engine = index.as_query_engine()
