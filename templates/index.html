@@ -11,10 +11,10 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="/static/images/ebook_icon.png" type="image/x-icon">
 
   <title>
-    Giftos
+    Interactive Ebook
   </title>
 
   <!-- slider stylesheet -->
@@ -40,21 +40,21 @@
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
-          Learn 
+          Explore Interactive Ebooks 
         </h2>
       </div>
       <div class = "row">
         {% for item in items %}
-          <div class="row-sm-6 row-md-4 row-lg-3 mb-3"> <!-- Added margin-bottom for spacing -->
+          <div class="row-sm-6 row-md-4 row-lg-3 mb-5">
             <div class="box">
               <div class="img-box">
                 <a href="topic/{{item.id}}">
                   <img src="{{item.img}}" >
                 </a>
+                
               </div>
-              <div class="detail-box">
-                <h6>{{ item.topic }}</h6>
-          </div>
+              <h6 class="item_center">{{ item.topic }}</h6>
+
         {% endfor %}
       </div>
       <div class="btn-box">
