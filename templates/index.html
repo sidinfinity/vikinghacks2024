@@ -1,75 +1,93 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="shortcut icon" href="/static/images/ebook_icon.png" type="image/x-icon">
+ <!-- Basic -->
+ <meta charset="utf-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <!-- Mobile Metas -->
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+ <!-- Site Metas -->
+ <meta name="keywords" content="" />
+ <meta name="description" content="" />
+ <meta name="author" content="" />
+ <link rel="shortcut icon" href="/static/images/ebook_icon.png" type="image/x-icon">
 
-  <title>
-    Interactive Ebook
-  </title>
 
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+ <title>
+   Interactive Ebook
+ </title>
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
 
-  <!-- Custom styles for this template -->
-  <link href="/static/css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="/static/css/responsive.css" rel="stylesheet" />
+ <!-- slider stylesheet -->
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+
+ <!-- bootstrap core css -->
+ <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+
+
+ <!-- Custom styles for this template -->
+ <link href="/static/css/style.css" rel="stylesheet" />
+ <!-- responsive style -->
+ <link href="/static/css/responsive.css" rel="stylesheet" />
 </head>
 
+
 <body>
- 
-  </div>
-  <!-- end hero area -->
 
-  <!-- shop section -->
 
-  <section class="shop_section layout_padding">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Explore Interactive Ebooks 
-        </h2>
-      </div>
-      <div class = "row">
-        {% for item in items %}
-          <div class="row-sm-6 row-md-4 row-lg-3 mb-5">
-            <div class="box">
-              <div class="img-box">
-                <a href="topic/{{item.id}}">
-                  <img src="{{item.img}}" >
-                </a>
-                
-              </div>
-              <h6 class="item_center">{{ item.topic }}</h6>
+ <!-- end hero area -->
 
-        {% endfor %}
-      </div>
-      <div class="btn-box">
-       
-      </div>
-    </div>
-  </div>
-  <!-- end shop section -->
 
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <script src="js/custom.js"></script>
+ <!-- shop section -->
+ <style>
+   body {
+     background-image: url(../static/images/background.png);
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+   }
+   </style>
+ <section class="shop_section layout_padding">
+   <div class="container">
+     <div class="heading_container heading_center">
+       <h2>
+         Explore Interactive Ebooks
+       </h2>
+     </div>
+     <div class = "row">
+       {% for item in items %}
+         <div class="row-sm-6 row-md-4 row-lg-3 mb-5">
+           <div class="box">
+             <div class="img-box">
+               <a href="topic/{{item.id}}">
+                 <img src="{{item.img}}" >
+               </a>
+              
+             </div>
+             <h6 class="item_center">{{ item.topic }}</h6>
+
+
+       {% endfor %}
+     </div>
+     <div class="btn-box">
+     
+     </div>
+   </div>
+ </div>
+ <!-- end shop section -->
+
+
+ <script src="js/jquery-3.4.1.min.js"></script>
+ <script src="js/bootstrap.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+ </script>
+ <script src="js/custom.js"></script>
+
 
 </body>
+
 
 </html>
